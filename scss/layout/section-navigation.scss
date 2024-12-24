@@ -1,0 +1,261 @@
+.section-navigation {
+  position: relative;
+
+  .section-navigation-inner {
+    position: absolute;
+    left: 0;
+    top: -110px;
+    display: flex;
+    max-width: 90%;
+    z-index: 999999;
+    align-items: flex-start;
+    transition: all 0.2s ease-in-out;
+    width: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    @media (min-width: 800px) {
+      max-width: 400px;
+    }
+
+    .section-navigation-toggler {
+      text-decoration: none;
+      -webkit-appearance: none;
+      appearance: none;
+      padding: 14px 11px;
+      text-decoration: none;
+      padding-bottom: 20px;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      color: black;
+      font-size: 16px;
+      line-height: 20px;
+      background-color: #fa4616;
+      filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.16));
+
+      @media (min-width: 800px) {
+        font-size: 20px;
+        line-height: 24px;
+        padding-bottom: 50px;
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+
+      .open-btn {
+        &:before {
+          margin-bottom: 10px;
+          content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="7.464" height="15.64" viewBox="0 0 7.464 15.64"><path id="Path_13869" data-name="Path 13869" d="M0,5.917,7.35,0,14.7,5.917" transform="translate(6.501 0.47) rotate(90)" fill="none" stroke="%23000" stroke-width="1.5"/></svg>');
+        }
+      }
+
+      .close-btn {
+        font-size: 20px;
+        line-height: 24px;
+        font-family: "gentonabook";
+
+        &:before {
+          max-width: 13px;
+          max-height: 13px;
+          margin-bottom: 10px;
+          content: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" width="13.717" height="13.719" viewBox="0 0 13.717 13.719"><g id="section-nav-close" transform="translate(-547.969 -750.969)"><path id="Path_13736" data-name="Path 13736" d="M-13953.17-19808.256l-12.656,12.656" transform="translate(14514.325 20559.756)" fill="none" stroke="%23000" stroke-width="1.5"/><path id="Path_13737" data-name="Path 13737" d="M-13965.826-19808.256l12.656,12.656" transform="translate(14514.325 20559.756)" fill="none" stroke="%23000" stroke-width="1.5"/></g></svg>');
+        }
+      }
+    }
+
+    .menu-active .section-menu {
+      display: block;
+    }
+
+    .section-menu {
+      max-height: 400px;
+      background-color: #fff;
+      border-top: 1px solid #707070;
+      width: 100%;
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+      display: none;
+      overflow-y: hidden;
+
+
+      &:hover, &:focus {
+        overflow-y: auto;
+      }
+
+      .current-menu-item {
+        color: #000;
+        font-family: "gentonasemibold";
+      }
+
+      .current-page {
+        background-color: #fff;
+        width: 100%;
+
+        p {
+          color: #000;
+          font-family: "gentonasemibold";
+          padding-left: 10px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          border-bottom: 0.5px dotted #fa4616;
+          margin-bottom: 0;
+        }
+      }
+
+      ul,
+      li {
+        list-style: none;
+        padding-left: 0 !important;
+      }
+
+      ul,
+      .show {
+        border: none !important;
+        border-radius: 0 !important;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      li {
+        font-size: 18px;
+        line-height: 42px;
+        font-family: "gentonabook";
+        text-align: left;
+        color: #0021a5;
+        margin-bottom: 0;
+        padding-left: 10px;
+
+        .menu-parent-link {
+          padding-left: 15px;
+        }
+
+        a {
+          padding-left: 30px;
+          padding-right: 25px;
+          font-size: 18px;
+          line-height: 42px;
+          text-align: left;
+          color: #0021a5;
+          font-family: "gentonabook";
+          display: block;
+          border-bottom: 0.5px dotted #fa4616;
+          position: relative;
+          text-decoration: none;
+          white-space: pre-wrap;
+
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .dropdown-toggle:after {
+        background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.464 15.64"><path fill="none" stroke="%230021a5" stroke-width="1.5" d="m.584.47 5.917 7.35-3.452 4.287L.584 15.17" data-name="Path 13863"/></svg>');
+        border: none !important;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+  }
+
+  .menu-active {
+    left: 0;
+    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.16));
+    width: 100%;
+
+    .open-btn {
+      display: none;
+    }
+    .close-btn {
+      display: block !important;
+    }
+
+    .section-menu {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: all;
+      display: block;
+    }
+  }
+
+  .menu-out {
+    display: none;
+  }
+
+  .section-dropdown, .dropdown-menu {
+    position: relative !important;
+    transform: unset !important;
+    border-bottom: none !important;
+    margin-left: 0;
+  }
+
+
+  .dropdown-active {
+    display: none !important;
+    &:nth-last-child(1) {
+      display: block !important;
+    }
+    &:after {
+      opacity: 0;
+    }
+  }
+
+  .toggleExpanded {
+    display: block !important;
+    position: relative !important;
+    inset: unset !important;
+    transform: unset !important;
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: #fff;
+  }
+
+  #section-nav-ul {
+    margin-bottom: 0;
+  }
+}
+
+
+
+.section-menu::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.section-menu::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.section-menu::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.section-menu::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+.section-menu .dropdown-item.active, .section-menu .dropdown-item:active {
+  background-color: #fff !important;
+}
+
+#section-nav-ul .current_page_item > a {
+  color: #000;
+  font-family: "gentonasemibold";
+}

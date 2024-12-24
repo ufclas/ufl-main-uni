@@ -1,0 +1,398 @@
+.button {
+  touch-action: manipulation;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:focus {
+    outline: unset;
+  }
+}
+
+
+/* Button block
+--------------------------------------------- */
+
+// Gutenberg color options
+// -- see editor-color-palette in functions.php
+$colors: (
+'blue' 		: #0021a5,
+'white' 	: #fff,
+'orange' 	: #e8552f,
+'light-gray' : #f4f6f6,
+);
+
+$color_hover: (
+'blue' 		: #0021a5,
+'white' 	: #fff,
+'orange' 	: #e8552f,
+'light-gray' : #f4f6f6,
+);
+
+
+
+
+
+  .is-style-animated-border .wp-block-button__link {
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-style: solid;
+    padding: 15px 43px;
+    position: relative;
+    font-size: 26px;
+    font-family: "gentonasemibold", Arial, sans-serif;
+    text-align: center;
+    user-select: none;
+    vertical-align: middle;
+    white-space: normal;
+    display: inline-flex;
+    border-color: #fa4616;
+    color: #343741;
+    border-radius: 0;
+    background-color: #fff;
+  
+    @media (max-width: 767px) {
+      font-size: 20px;
+    }
+  
+    &:before {
+      content: "";
+      transition: all 0.3s;
+      height: 0;
+      position: absolute;
+      width: 87%;
+      border-top: 1px solid #fa4616;
+      right: 0;
+      top: 0;
+    }
+    &:after {
+      content: "";
+      transition: all 0.3s;
+      height: 0;
+      position: absolute;
+      width: 87%;
+      border-bottom: 1px solid #fa4616;
+      bottom: 0;
+      left: 0;
+    }
+    &:hover,
+    &:focus {
+
+      color: #343741;
+      background: #f4f6f6;
+
+      &::before {
+        width: 100%;
+      }
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  
+
+
+  .is-style-animated-underline .wp-block-button__link {
+    display: inline-block;
+    color: #313535;
+    font-family: "gentonamediumitalic";
+    font-size: 19px;
+    letter-spacing: -0.01em;
+    line-height: 24px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    padding-bottom: 7px;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0 0 7px;
+    
+    &:hover, &:focus {
+      color: #313535;
+    }
+  
+  
+    &::after {
+      transition: all 0.3s;
+      content: "";
+      height: 0;
+      position: absolute;
+      width: 100%;
+      border-bottom: 2px solid #e8552f;
+      bottom: 0;
+      right: 0;
+    }
+  
+    &:hover::after,
+    &:focus::after {
+      width: 26px;
+    }
+  }
+  
+  
+
+.is-style-animated-border a, .animated-border-button, .wp-block-button__link{
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-style: solid;
+  padding: 15px 43px;
+  position: relative;
+  font-size: 26px;
+  font-family: "gentonasemibold", Arial, sans-serif;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+  white-space: normal;
+  display: inline-flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+
+  @media (max-width: 767px) {
+    font-size: 20px;
+    padding: 16px !important;
+    min-height: 70px;
+    min-width: 300px;
+  }
+
+  &:before {
+    content: "";
+    transition: all 0.3s;
+    height: 0;
+    position: absolute;
+    width: 87%;
+  }
+  &:after {
+    content: "";
+    transition: all 0.3s;
+    height: 0;
+    position: absolute;
+    width: 87%;
+  }
+  &:hover,
+  &:focus {
+    &::before {
+      width: 100%;
+    }
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.button-border-blue {
+  border-color: #0021a5;
+}
+.button-border-blue:before {
+  border-top: 1px solid #0021a5;
+}
+.button-border-blue:after {
+  border-bottom: 1px solid #0021a5;
+}
+.button-border-orange {
+  border-color: #fa4616;
+}
+.button-border-orange:before {
+  border-top: 1px solid #fa4616;
+}
+.button-border-orange:after {
+  border-bottom: 1px solid #fa4616;
+}
+.button-border-white {
+  border-color: #fff;
+}
+.button-border-white:before {
+  border-top: 1px solid #fff;
+}
+.button-border-white:after {
+  border-bottom: 1px solid #fff;
+}
+.button-text-light {
+  color: #fff;
+  &:hover,
+  &:focus {
+    color: #fff;
+    background: #343741;
+  }
+}
+
+.button-text-dark {
+  color: #343741;
+
+  &:hover,
+  &:focus {
+    color: #343741;
+    background: #f4f6f6 !important;
+  }
+}
+
+.button-dark-bg {
+  color: #f4f6f6;
+  background-color: #343741;
+
+  &:hover, &:focus {
+    background-color: #f4f6f6 !important;
+    color: #343741;
+  }
+}
+  
+
+.animated-border-button:before {
+  right: 0;
+  top: 0;
+}
+
+.animated-border-button:after {
+  bottom: 0;
+  left: 0;
+}
+
+.animated-underline-button {
+  display: inline-block;
+  color: #313535;
+  font-family: "gentonamediumitalic";
+  font-size: 19px;
+  letter-spacing: -0.01em;
+  line-height: 24px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  padding-bottom: 7px;
+
+  &:hover, &:focus {
+    color: #313535;
+  }
+
+
+  &::after {
+    transition: all 0.3s;
+    content: "";
+    height: 0;
+    position: absolute;
+    width: 100%;
+    border-bottom: 2px solid #e8552f;
+    bottom: 0;
+    right: 0;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    width: 26px;
+  }
+}
+
+
+.card-container {
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  .card {
+    padding: 48px 20px 42px 20px;
+    width: 100%;
+
+    height: inherit !important;
+    text-align: center;
+    text-decoration: none;
+    border-left: 1px solid #fa4616;
+    border-right: 1px solid #fa4616;
+    border-top: unset;
+    border-bottom: unset;
+    border-radius: 0;
+    margin-bottom: 30px;
+    display: inline-block;
+    height: inherit !important;
+    -webkit-flex: 1 1 0;
+    flex: 1 1 0;
+    margin-right: 10px;
+    margin-left: 10px;
+
+    &:nth-last-child(1) {
+      margin-right: 2px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-right: 52px;
+      margin-left: 0px;
+      max-width: 500px;
+    }
+
+    &:before {
+      transition: all 0.3s;
+      content: "";
+      height: 0;
+      position: absolute;
+      width: 126px;
+      right: 0;
+      top: 0;
+      border-top: 1px solid #fa4616;
+    }
+
+    &:after {
+      border-bottom: 1px solid #fa4616;
+      bottom: 0;
+      left: 0;
+      transition: all 0.3s;
+      content: "";
+      height: 0;
+      position: absolute;
+      width: 126px;
+    }
+
+    &:hover,
+    &:focus {
+      background: #f4f6f6;
+
+      &::before,
+      &::after {
+        width: 100%;
+      }
+    }
+
+    .cta-title {
+      font-size: 26px;
+      line-height: 40px;
+      text-align: center;
+      color: #343741;
+      font-family: "gentonasemibold";
+      display: block;
+    }
+
+    .cta-text {
+      font-size: 21px;
+      letter-spacing: -0.01em;
+      line-height: 38px;
+      text-align: center;
+      color: #000;
+      font-family: "gentonabook";
+      padding: 5px;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}  
+
+
+.button-wrapper {
+  row-gap: 10px;
+  column-gap: 50px;
+  flex-wrap: wrap;
+
+  @media (min-width: 767px) {
+    flex-wrap: nowrap;
+  }
+
+  a {
+    margin-bottom: 20px;
+  }
+
+}

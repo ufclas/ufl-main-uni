@@ -1,0 +1,78 @@
+.off-canvas-search {
+    z-index: 999999999999;
+    max-height: 206px !important;
+
+    .offcanvas-body {
+        max-width: 935px;
+        margin: auto;
+        width: 100%;
+    }
+    .btn-close {
+        margin-left: auto;
+        font-size: 20px;
+        height: 42px;
+        width: 42px;
+        margin-right: 2%;
+        color: #0021A5 !important;
+        opacity: 1;
+        border-color: #0021A5 !important;
+        background-image: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="%230021A5"><path d="M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z"/></svg>');
+   
+        @media (min-width: 800px) {
+            margin-right: 10%;
+            font-size: 30px;
+        }
+    }
+    .form-control {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        max-width: 935px;
+        margin: auto;
+        border-bottom: 2px solid #9d6851;
+        padding: 0 0 15px 0;
+        border-radius: 0;
+        font-size: 20px;
+        line-height: 35px;
+        color: #0021A5;
+        font-family: 'gentonamedium',Arial,sans-serif;
+
+        @media (min-width: 800px) {
+            font-size: 26px;
+            line-height: 48px;
+        }
+
+        &::placeholder {
+            font-family: 'gentonamedium',Arial,sans-serif;
+            opacity: 1;
+            color: #0021A5;
+        }
+    }
+    .search-submit {
+        appearance: none;
+        -webkit-appearance: none;
+        width: 24px;
+        height: 24px;
+        background-image: url('../img/search-submit.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50%;
+
+        @media (min-width: 800px) {
+            width: 46px;
+            height: 46px;
+        }
+
+
+        &:focus {
+            box-shadow: 0 0 0 0.25rem #0c6bf940;
+            opacity: 1;
+        }
+    }
+
+    .search-submit:focus {
+        box-shadow: 0 0 0 0.25rem #0c6bf940;
+        opacity: 1;
+    }
+
+}

@@ -1,0 +1,18 @@
+//@import "bscore_style";
+@import "bscore_variables";     
+@import "bootstrap/bootstrap";
+@import "bscore_custom";
+@import 'base';
+// Partials styles
+@import 'components/buttons';
+
+@import 'layout/breadcrumb';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/nav';
+@import "layout/news-landing"; 
+@import 'layout/off-canvas-search';
+@import 'layout/section-navigation';
+
+//@import 'components/accordion';
+@import 'layout/single-news';

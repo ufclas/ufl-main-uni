@@ -1,0 +1,1082 @@
+html {
+  //overflow-x: hidden;
+}
+
+body {
+  padding-top: 0px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Gentona", sans-serif;
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+}
+
+a {
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+button {
+  transition: all 0.3s ease-in-out;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+h1,
+.h1 {
+  font-family: "gentonamedium";
+  font-size: 30px;
+  line-height: 34px;
+  color: #000;
+
+  @media (min-width: 800px) {
+    font-size: 48px;
+    line-height: 54px;
+  }
+}
+
+h2,
+.h2 {
+  font-family: "gentonalight";
+  font-size: 36px;
+  line-height: 42px;
+  color: #000;
+
+  @media (min-width: 800px) {
+    font-size: 58px;
+    line-height: 64px;
+  }
+}
+
+h3,
+.h3 {
+  font-family: "gentonabook";
+  font-size: 30px;
+  line-height: 38px;
+  color: #000;
+}
+
+h4,
+.h4 {
+  font-family: "gentonasemibold";
+  font-size: 22px;
+  line-height: 28px;
+  color: #000;
+}
+
+p {
+  font-family: "gentonalight";
+  font-size: 20px;
+  line-height: 28px;
+  color: #313535;
+}
+
+ul li,
+ol li {
+  font-family: "gentonalight";
+  font-size: 20px;
+  line-height: 28px;
+  color: #313535;
+  margin-bottom: 10px;
+}
+
+#content ul {
+  padding-left: 35px;
+  list-style: square;
+
+
+  li {
+    padding-left: 10px;
+
+    &::marker {
+      font-size: 28px;
+      color: #fa4616;
+    }
+  }
+}
+
+#content ol {
+  padding-left: 35px;
+
+  li {
+    padding-left: 10px;
+
+    &::marker {
+      font-family: "gentonamedium";
+      font-size: 20px;
+      line-height: 28px;
+      color: #0021a5;
+    }
+  }
+}
+
+#content ol.roman {
+  padding-left: 35px;
+  list-style-type: upper-roman;
+
+  li {
+
+    &::marker {
+      font-family: "gentonamedium";
+      font-size: 20px;
+      line-height: 28px;
+      color: #0021a5;
+    }
+  }
+}
+
+.wp-block-table {
+  max-width: calc(1640px - 14%);
+  margin: 2.5% auto;
+  padding: 20px 7%;
+  overflow-x: scroll;
+  scrollbar-color: #f3f1e9 #fa4616;
+
+  td,
+  th {
+    border: 0px solid;
+  }
+
+
+  table {
+    overflow-x: scroll;
+    max-width: 1640px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    thead,
+    tbody,
+    tfoot,
+    tr,
+    td,
+    th {
+      border-color: inherit;
+      border-style: solid;
+      border-width: 0;
+    }
+
+    tr {
+      border-bottom: 1px solid #8a9397;
+    }
+
+    th {
+      font-family: "gentonasemibold";
+      font-size: 22px;
+      line-height: 38px;
+      text-align: left;
+      color: #0021a5 !important;
+      padding-left: 20px;
+    }
+
+    td {
+      padding: 0.7rem 1rem;
+      font-size: 20px;
+      line-height: 38px;
+      text-align: left;
+      color: #313535;
+      font-family: "gentonalight";
+      min-width: 175px;
+
+      &:nth-of-type(odd) {
+        background-color: #f4f6f6;
+      }
+    }
+  }
+}
+
+.wp-block-table::-webkit-scrollbar {
+  height: 10px;
+  margin-top: 10px;
+}
+
+.wp-block-table::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 60px;
+
+  @media only screen and (min-width: 768px) {
+    margin: 30vw;
+  }
+}
+
+.wp-block-table::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: #bbbbba;
+  background-image: linear-gradient(#bbbbba 0,
+      #bbbbba 0rem,
+      #fa4616 0rem,
+      #fa4616 1rem);
+}
+
+
+
+.is-style-stripes table {
+  margin-bottom: 0;
+  border-left: none;
+  border-right: none;
+  overflow-x: scroll;
+  border-top: 1px solid #8a9397 !important;
+  border-bottom: 1px solid #8a9397 !important;
+
+  tbody {
+    border-top: 1px solid #8a9397 !important;
+    border-bottom: 1px solid #8a9397;
+  }
+
+  tr {
+    border-color: #f4f6f6;
+    border: none;
+
+    &:nth-last-child(1) {
+      box-shadow: 0px 1px 0px #8a9397;
+    }
+
+  }
+
+  th {
+    font-family: "gentonasemibold";
+    font-size: 22px;
+    line-height: 38px;
+    text-align: left;
+    color: #0021a5 !important;
+    padding-left: 20px;
+    border-right: 1px solid #8a9397 !important;
+    border-left: 0;
+    border-bottom: 1px solid rgb(0 0 0 / 0%);
+    border-top: 0;
+  }
+
+  td {
+    font-size: 20px;
+    line-height: 38px;
+    text-align: left;
+    color: #313535;
+    font-family: "gentonalight";
+    min-width: 175px;
+    border-right: 1px solid #8a9397 !important;
+    border-bottom: 0;
+    border-bottom: 1px solid rgb(0 0 0 / 0%);
+    border-top: 0;
+
+    &:nth-last-child(1) {
+      border-right: none !important;
+    }
+
+    &:nth-of-type(odd) {
+      background-color: unset;
+    }
+  }
+
+  tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: #f4f6f6;
+  }
+}
+
+.table-striped> :not(caption)>*>* {
+  padding: 0.7rem 1rem;
+}
+
+.is-style-regular table {
+  overflow-x: scroll;
+  max-width: 1640px;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  thead,
+  tbody,
+  tfoot,
+  tr,
+  td,
+  th {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+  }
+
+  tr {
+    border-bottom: 1px solid #8a9397 !important;
+  }
+
+  th {
+    font-family: "gentonasemibold";
+    font-size: 22px;
+    line-height: 38px;
+    text-align: left;
+    color: #0021a5 !important;
+    padding-left: 20px;
+  }
+
+  td {
+    padding: 0.7rem 1rem;
+    font-size: 20px;
+    line-height: 38px;
+    text-align: left;
+    color: #313535;
+    font-family: "gentonalight";
+    min-width: 175px;
+
+    &:nth-of-type(odd) {
+      background-color: #f4f6f6;
+    }
+  }
+}
+
+
+
+.fs-21 {
+  font-size: 21px;
+}
+
+.fs-24 {
+  font-size: 24px;
+}
+
+.heading-blue {
+  color: $primary-blue;
+}
+
+.bg-gray {
+  background-color: #f4f6f6;
+}
+
+.social-column {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  a {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    font-size: 21px;
+  }
+
+}
+
+.social-column-blue {
+  a {
+    background-color: #fff;
+    color: $primary-blue;
+
+    &:hover,
+    &:focus {
+      background-color: $primary-blue;
+      color: #fff;
+    }
+  }
+
+}
+
+.social-column-white {
+  a {
+    background-color: rgba(255, 255, 255, 0.2);
+
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: $primary-blue;
+    }
+  }
+}
+
+
+
+.social-column-grey {
+  a {
+    background-color: #F4F6F6;
+    color: $primary-blue;
+
+    &:hover,
+    &:focus {
+      background-color: $primary-blue;
+      color: #fff;
+    }
+  }
+
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "gentonabbitalic";
+  src: url(../fonts//gentona_bold_bold_italic) format("ttf"),
+    url(../fonts//gentona_bold_bold_italic.woff) format("woff"),
+    url(../fonts//gentona_bold_bold_italic.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "gentonabook";
+  src: url(../fonts//gentona_book) format("ttf"),
+    url(../fonts//gentona_book.woff) format("woff"),
+    url(../fonts//gentona_book.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "gentonabookbold";
+  src: url(../fonts//gentona_book_bold) format("ttf"),
+    url(../fonts//gentona_book_bold.woff) format("woff"),
+    url(../fonts//gentona_book_bold.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "gentonabookitalic";
+  src: url(../fonts//gentona_book_italic) format("ttf"),
+    url(../fonts//gentona_book_italic.woff) format("woff"),
+    url(../fonts//gentona_book_italic.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "gentonaextrabold";
+  src: url(../fonts//gentona_extra_bold) format("ttf"),
+    url(../fonts//gentona_extra_bold.woff) format("woff"),
+    url(../fonts//gentona_extra_bold.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "gentonaextrabolditalic";
+  src: url(../fonts//gentona_extra_bold_italic) format("ttf"),
+    url(../fonts//gentona_extra_bold_italic.woff) format("woff"),
+    url(../fonts//gentona_extra_bold_italic.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "gentonaheavy";
+  src: url(../fonts//gentona_heavy) format("ttf"),
+    url(../fonts//gentona_heavy.woff) format("woff"),
+    url(../fonts//gentona_heavy.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "gentonaheavyitalic";
+  src: url(../fonts//gentona_heavy_italic) format("ttf"),
+    url(../fonts//gentona_heavy_italic.woff) format("woff"),
+    url(../fonts//gentona_heavy_italic.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "gentonalight";
+  src: url(../fonts//gentona_light) format("ttf"),
+    url(../fonts//gentona_light.woff) format("woff"),
+    url(../fonts//gentona_light.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "gentonamedium";
+  src: url(../fonts//gentona_medium) format("ttf"),
+    url(../fonts//gentona_medium.woff) format("woff"),
+    url(../fonts//gentona_medium.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "gentonamediumitalic";
+  src: url(../fonts//gentona_medium_italic) format("ttf"),
+    url(../fonts//gentona_medium_italic.woff) format("woff"),
+    url(../fonts//gentona_medium_italic.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "gentonasemibold";
+  src: url(../fonts//gentona_semi_bold) format("ttf"),
+    url(../fonts//gentona_semi_bold.woff) format("woff"),
+    url(../fonts//gentona_semi_bold.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.modal {
+  z-index: 99999999999;
+}
+
+.modal-backdrop {
+  z-index: 999999999;
+}
+
+
+.lightbox .modal-dialog {
+  margin-top: 70px;
+}
+
+.lightbox .btn-close {
+  top: -70px !important;
+  opacity: 1;
+  font-size: 28px;
+}
+
+
+
+
+
+.ufl-brands {
+  display: flex;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+
+  &:before {
+    width: 100%;
+  }
+
+}
+
+.ufl-facebook {
+  max-width: 15px;
+}
+
+.ufl-twitter {
+  max-width: 23px;
+}
+
+.ufl-instagram {
+  max-width: 23px;
+}
+
+.ufl-youtube {
+  max-width: 25px;
+}
+
+
+
+.mobile-slide-btn {
+  display: flex;
+  justify-content: center;
+  font-size: 42px;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+
+
+  button {
+    appearance: none;
+    -webkit-appearance: none;
+    background: none !important;
+    padding: 10px;
+    color: #FA4616 !important;
+    border: none;
+  }
+
+}
+
+
+@media (min-width: 991px) {
+  .showcase-text-image:nth-last-child(2) .text-image-row {
+    flex-direction: row-reverse !important;
+  }
+}
+
+.fullwidth-text-block a {
+  font-family: "gentonamedium";
+  color: #0021a5;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: #000;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.editor-styles-wrapper .collapse:not(.show) {
+  display: block !important;
+}
+
+.editor-styles-wrapper .wp-core-ui .button,
+.wp-core-ui .button-secondary {
+  background: #f6f7f700 !important;
+}
+
+
+.editor-styles-wrapper .alert .animated-underline-button {
+  color: #fff !important;
+}
+
+
+.editor-styles-wrapper .button-wrapper .block-editor-block-list__layout {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.editor-styles-wrapper .animated-border-button {
+  background: transparent !important;
+}
+
+.editor-styles-wrapper .wp-block-freeform .has-advanced-toolbar {
+  display: block !important;
+}
+
+
+
+.single-news {
+  overflow-x: hidden;
+
+  .single-news-hero {
+    position: relative;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 55px;
+    min-height: 85vh;
+
+    &:after {
+      content: "";
+      background: linear-gradient(to top, #343741 0%, rgba(0, 17, 83, 0) 100%);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      bottom: 0;
+      z-index: 6;
+      mix-blend-mode: multiply;
+    }
+
+    h1 {
+      text-align: left;
+      color: #fff;
+      text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.39);
+      font-family: "gentonasemibold";
+      position: relative;
+      z-index: 9999;
+      max-width: calc(14% + 1074px);
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10% 7% 55px;
+      font-size: 32px;
+      line-height: 46px;
+
+      @media only screen and (min-width: 800px) {
+        font-size: 48px;
+        line-height: 56px;
+      }
+    }
+  }
+
+  .news-related-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-left: 7%;
+
+    @media only screen and (max-width: 1640px) {
+      padding-right: 30px;
+    }
+
+    .news-wrapper-inner {
+      width: 100%;
+      gap: 50px;
+      max-width: 1500px;
+
+      @media only screen and (min-width: 1055px) {
+        display: flex;
+        justify-content: center;
+      }
+
+      .single-news-body-content {
+        max-width: 1074px;
+        margin-left: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  .single-news-highlight {
+    max-width: 1074px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(14% + 1074px);
+    padding: 0 7%;
+
+    p {
+      font-size: 26px;
+      line-height: 48px;
+      font-size: 22px;
+      line-height: 34px;
+      color: #343741;
+      font-family: "gentonamedium";
+
+      @media only screen and (min-width: 800px) {
+        font-size: 22px;
+        line-height: 34px;
+      }
+    }
+
+    hr {
+      border-bottom: 1px solid #fa4616;
+      border-top: none;
+      margin: 0;
+      opacity: 1;
+    }
+  }
+
+  .single-news-body {
+    padding: 3% 7%;
+    max-width: calc(14% + 1074px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .single-news-footer-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(14% + 1074px);
+    padding-left: 7%;
+    padding-right: 7%;
+
+    .single-news-footer {
+      padding: 30px 0 44px;
+      border-top: 1px solid #fa4616;
+
+      .single-news-meta {
+        column-gap: 20px;
+        row-gap: 10px;
+        flex-direction: column;
+
+        @media only screen and (min-width: 800px) {
+          flex-direction: row;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 28px;
+          color: #000;
+          margin-bottom: 0;
+
+          @media only screen and (min-width: 800px) {
+            font-size: 20px;
+          }
+        }
+
+        a {
+          color: #0021a5;
+          font-size: 18px;
+          line-height: 28px;
+          text-decoration: none;
+          font-family: "gentonamedium";
+
+          @media only screen and (min-width: 800px) {
+            font-size: 20px;
+          }
+
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          }
+        }
+
+        span {
+          display: none;
+
+          @media only screen and (min-width: 800px) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .single-news-body .figure-caption,
+  .single-news-body-content .figure-caption {
+    font-size: 17px;
+    line-height: 20px;
+    text-align: left;
+    color: #000;
+    margin-bottom: 60px;
+    font-family: "gentonalight";
+  }
+
+  .single-news-related-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 7%;
+    padding-right: 7%;
+
+    @media only screen and (min-width: 1055px) {}
+
+    @media only screen and (min-width: 1600px) {
+      position: absolute;
+      top: 200px;
+      right: 20px;
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 228px;
+      display: block;
+      margin-left: inherit;
+      margin-right: inherit;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @media only screen and (min-width: 1755px) {
+      right: 5%;
+    }
+  }
+
+  .news-related-link {
+    margin-bottom: 0px;
+    text-decoration: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media only screen and (min-width: 1200px) {
+      max-width: 228px;
+      margin-bottom: 60px;
+    }
+
+    .title {
+      font-size: 20px;
+      letter-spacing: 0.2em;
+      line-height: 1;
+      text-align: left;
+      color: #000;
+      text-transform: uppercase;
+    }
+
+    .excerpt {
+      font-size: 18px;
+      line-height: 22px;
+      text-align: left;
+      color: #000;
+      font-family: "gentonasemibold";
+      margin-top: 20px;
+    }
+
+    .related-img-wrapper {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      max-width: 228px;
+
+      img {
+        margin-bottom: 0;
+      }
+
+      &:after {
+        content: "";
+        background-color: #fa4616;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateY(101%);
+        transition: all 0.2s ease-in-out;
+        z-index: 9999;
+        mix-blend-mode: multiply;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      .related-img-wrapper:after {
+        transform: translateY(0%);
+      }
+
+      .excerpt {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+.block-editor-inner-blocks {
+  width: 100% !important;
+}
+
+.components-button svg {
+  opacity: 1 !important;
+  width: 35px !important;
+  height: 35px !important;
+}
+
+.block-editor-block-list__block .block-list-appender,
+.block-list-appender.wp-block,
+.editor-styles-wrapper .block-list-appender {
+  position: relative !important;
+  background-color: rgb(255 255 255 / 80%) !important;
+}
+
+.editor-styles-wrapper .faculty-blockquote-section .card {
+  background-color: transparent;
+  border: none;
+}
+
+// LOGO LINK Alternate
+.navbar-brand-alternate {
+  display: inline-block;
+  width: 100%;
+  max-width: 412px;
+  max-height: 74px;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: left;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-family: "gentonabookbold";
+  overflow-wrap: break-word !important;
+  white-space: inherit !important;
+  transition: none !important;
+
+  @media (max-width: $breakpoint-nav) {
+    margin-left: -16px;
+
+  }
+
+  @media (min-width: 800px) {
+    font-size: 24px;
+    line-height: 25px;
+  }
+
+  .alt-logo-txt {
+    margin-top: -5px;
+  }
+
+
+  img {
+    max-width: 412px;
+    max-height: 70px;
+    width: auto;
+    margin-right: 10px;
+    margin-top: -1px;
+
+    @media (min-width: 800px) {
+      margin-right: 35px;
+    }
+  }
+}
+
+
+.scrolling_down .dropdown-menu {
+  display: none !important;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  height: 0;
+}
+
+
+.scrolling_down {
+
+  @media (max-width: 1409px) {
+    position: relative;
+  }
+}
+
+.faculty-listing-carousel .carousel-control-prev,
+.faculty-listing-carousel .carousel-control-next,
+.event-shell .carousel-control-prev,
+.event-shell .carousel-control-next,
+.image-gallery .carousel-control-prev,
+.image-gallery .carousel-control-next {
+  max-height: 120px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: auto;
+}
+
+
+.faculty-listing-carousel .slick-arrow:focus,
+.event-shell .slick-arrow:focus,
+.image-gallery .slick-arrow:focus {
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25)
+}
+
+
+.section-navigation-back {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  color: #fff !important;
+  background-color: $primary-blue;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "gentonabook";
+
+  span {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 15px;
+    }
+  }
+}
+
+.section-navigation-back img {
+  margin-right: 15px;
+}

@@ -1,0 +1,15 @@
+$primary-blue: #0021A5;
+$primary-orange: #FA4616;
+$breakpoint-nav: 1410px;
+$modal-backdrop-opacity:.9;
+$modal-xl: 80%;
+$modal-lg: 80%;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1050px,
+  xl: 1240px,
+  xxl: 1410px
+);
+$breadcrumb-divider: quote(">");

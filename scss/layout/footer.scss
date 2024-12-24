@@ -1,0 +1,228 @@
+.footer-wrapper {
+  background-color: #fff;
+  overflow-x: hidden;
+
+  #footerTopBorder {
+    transition: width 3s;
+    height: 10px;
+    background: #fa4616;
+    width: 0%;
+  }
+
+  .footer {
+    background: transparent linear-gradient(180deg, #0b239a 0%, #0e2b5d 100%) 0% 0% no-repeat;
+    margin-top: 3rem;
+    padding-left: 5%;
+    padding-right: 2.5%;
+
+
+    li {
+      list-style: none !important;
+    }
+
+    .footer-section {
+      max-width: 1450px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 60px;
+      padding-bottom: 60px;
+
+      @media (min-width: 1050px) {
+        padding-top: 100px;
+        padding-bottom: 140px;
+      }
+
+
+      // LOGO LINK Alternate
+      .navbar-brand-alternate {
+        display: inline-block;
+        width: 100%;
+        max-width: 412px;
+        max-height: 74px;
+        font-size: 18px;
+        line-height: 20px;
+        text-align: left;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        font-family: "gentonabookbold";
+        overflow-wrap: break-word !important;
+        white-space: inherit !important;
+
+        &:hover {
+          text-decoration: none !important;
+        }
+
+        @media (min-width: 800px) {
+          font-size: 24px;
+          line-height: 25px;
+        }
+
+        img {
+          max-width: 412px !important;
+          max-height: 74px;
+          width: auto !important;
+          margin-right: 10px !important;
+
+          @media (min-width: 800px) {
+            margin-right: 35px !important;
+          }
+        }
+      }
+
+
+
+
+
+      .footer-col-logo img {
+        width: 100%;
+        max-width: 400px;
+        object-fit: contain;
+      }
+
+      .footer-address-col {
+        a {
+          font-family: "gentonamedium";
+        }
+      }
+
+      p {
+        margin: 0;
+        font-size: 21px;
+        font-weight: 300;
+        color: #ffffff;
+        font-family: "gentonalight";
+      }
+
+      a {
+        color: #f4f6f6;
+        text-decoration: none;
+        font-size: 21px;
+        font-family: "gentonalight";
+
+        &:hover,
+        &:focus {
+          color: #fff;
+          text-decoration: underline !important;
+          text-decoration-style: solid !important;
+        }
+      }
+
+      .widget-title {
+        border-bottom: 4px solid #e8552f;
+        font-family: "gentonasemibold";
+        font-size: 24px;
+        line-height: 40px;
+        text-align: left;
+        color: #fff;
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+
+      }
+    }
+
+    .footer-col-social {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+
+      @media (min-width: 800px) {
+        justify-content: end;
+      }
+
+      a {
+        width: 48px;
+        height: 48px;
+        background-color: rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        position: relative;
+        transition: all 0.2s ease-in-out;
+
+        &:hover,
+        &:focus {
+          background-color: rgba(255, 255, 255, 0.8);
+          color: #0021a5;
+        }
+
+      }
+
+
+
+    }
+  }
+}
+
+
+.copyright-section {
+  max-width: 1450px;
+  margin-left: auto;
+  margin-right: auto;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  #footer-copyright {
+    list-style: none;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    padding-left: 0;
+
+    li {
+      font-size: 16px;
+      margin-bottom: 10px;
+      display: block;
+      font-family: "gentonalight";
+
+      @media (min-width: 1050px) {
+        font-size: 21px;
+      }
+
+      @media (min-width: 800px) {
+        display: inline-block;
+      }
+
+
+      a {
+        font-size: 16px;
+        line-height: 32px;
+        text-align: left;
+        color: #fff;
+        text-decoration: none;
+        font-family: "gentonalight";
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+
+        @media (min-width: 1050px) {
+          font-size: 21px;
+        }
+
+        @media (min-width: 800px) {
+          border-right: 1px solid #fa4616;
+          margin-right: 25px;
+          padding-right: 30px;
+        }
+      }
+    }
+  }
+
+}
+
+#footer-copyright ul li:nth-last-child(1) a {
+  border-right: none;
+}

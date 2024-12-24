@@ -1,0 +1,120 @@
+.tab-block {
+    .tab-block-wrapper {
+      display: flex;
+      align-items: center;
+      align-content: stretch;
+      justify-content: center;
+      max-width: 1540px;
+      margin-left: auto;
+      margin-right: auto;
+  
+      .desktop-tab-link-col {
+        display: none;
+        max-width: 20%;
+        min-width: 400px;
+        border-right: 2px solid #fa4616;
+  
+        @media (min-width: 992px) {
+          display: block;
+        }
+  
+        .tab-link {
+          color: #000;
+          background: #fff;
+          position: relative;
+          border-right: 12px solid #fa471600;
+          transition: all 0.2s ease-in-out;
+          font-family: "gentonabook";
+          min-height: 70px;
+          font-size: 28px;
+          line-height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          text-decoration: none;
+          padding-right: 70px;
+  
+          &:hover,
+          &:focus {
+            color: #0021a5;
+          }
+        }
+        .tab-link.active,
+        .tab-link:not(.collapsed) {
+          color: #0021a5;
+          background: #fff;
+          border-right: 12px solid #fa4616;
+          pointer-events: none;
+        }
+      }
+  
+      .tab-content-col {
+        padding-left: 5%;
+        padding-right: 5%;
+  
+        @media (min-width: 992px) {
+          padding-left: 70px;
+          padding-right: 0;
+        }
+  
+        .tab-pane,
+        .accordion-collapse {
+          h3 {
+            font-size: 38px;
+            color: #343741;
+          }
+          p {
+            font-family: "gentonalight";
+            font-size: 20px;
+            line-height: 28px;
+            text-align: left;
+            color: #000;
+          }
+        }
+  
+        .accordion-body {
+          margin-bottom: 50px;
+        }
+  
+        .mobile-tab-link {
+          display: none;
+          width: 100%;
+          text-align: left;
+          border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+          margin-bottom: 20px;
+          color: #000;
+          background: #fff;
+          position: relative;
+          transition: all 0.2s ease-in-out;
+          font-family: "gentonabook";
+          min-height: 70px;
+          font-size: 28px;
+          border-left: none;
+          border-right: none;
+          border-top: none;
+          padding: 15px 0;
+          appearance: none;
+          -webkit-appearance: none;
+  
+          &:not(.collapsed) {
+            color: #0021a5;
+            border-bottom: 3px solid #e8552f;
+            pointer-events: none;
+          }
+  
+          @media (max-width: 992px) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Add indicator arrow for the active tab */
+  @media (min-width: 992px) {
+  }
+  
+  .tab-link.active::before {
+    opacity: 1;
+  }
+  
