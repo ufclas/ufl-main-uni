@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
 	
 		if (mobileLinks.length) {
 			jQuery('.mobile-secondary-dropdown').append(mobileLinks);
-			jQuery('.mobile-secondary-dropdown').find('.nav-link').attr('data-bs-toggle', 'dropdown');
+			jQuery('.mobile-secondary-dropdown').find('.dropdown-hover > .nav-link').attr('data-bs-toggle', 'dropdown');
 	
 			// Check if <hr /> has not been added yet
 			if (!hrAdded) {
