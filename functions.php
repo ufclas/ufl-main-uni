@@ -1375,3 +1375,34 @@ $lwCode = '
 return $lwCode; 
 } 
 add_shortcode('LiveWhale', 'liveWhale');
+
+// Same Site Search Setting
+
+function add_same_site_search_setting() {
+  add_settings_section(
+      'search_settings',
+      __( 'Search Settings' ),
+      'search_settings_callback',
+      'general'
+  );
+
+  add_settings_field(
+      'same_site_search',
+      __( 'Same Site Search' ),
+      'same_site_search_callback',
+      'general',
+      'search_settings'
+  );
+
+  register_setting( 'general', 'same_site_search' );
+}
+
+function search_settings_callback() {}
+
+function same_site_search_callback() {
+  $options = get_option( 'same_site_search' );
+  echo '<input type="checkbox" id="same_site_search" name="same_site_search" value="1" ' . checked( 1, $options, false ) . '/>';
+  echo '<label for="same_site_search">' . __( 'Limit search results to the current site' ) . '</label>';
+}
+
+add_action( 'admin_init', 'add_same_site_search_setting' );

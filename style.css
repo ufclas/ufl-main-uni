@@ -4,12 +4,14 @@ Theme URI: https://ufl.edu/
 Author: UFL 
 Author URI: https://ufl.edu/
 Description: A University of Florida Branded WordPress Theme.
-Version: 5.2.3.2
-Tested up to: 6.6.1
+Version: 5.2.3.1
+Tested up to: 6.1.1
 Requires PHP: 5.6
 License URI: https://ufl.edu
 Text Domain: ufl
 Tags: featured-images, threaded-comments, translation-ready
+
+Use this theme to make something cool, have fun, and share what you've learned with others.
 
 */
 
@@ -1331,4 +1333,40 @@ input[type=submit]:hover, input[type=submit]:focus {
     flex-wrap: nowrap;
     height: max-content;
   }
+}
+
+/* Appearance change for main nav dropdowns with few items */   
+#main-nav-ul > li > ul.navbar-one-column.dropdown-menu {
+    min-width: 325px;
+    column-count: 1;
+}
+#main-nav-ul > li > ul.navbar-two-columns.dropdown-menu {
+    min-width: 550px;
+    column-count: 2;
+}
+
+/* Editor Custom Color styles */
+.has-blue-color {
+    color: var(--core-blue);
+}
+.has-blue-background-color {
+    background: var(--core-blue);
+}
+.has-white-color {
+    color: var(--white);
+}
+.has-white-background-color {
+    background: var(--white);
+}
+.has-orange-color {
+    color: var(--core-orange);
+}
+.has-orange-background-color {
+    background: var(--core-orange);
+}
+.has-light-gray-color {
+    color: #f4f6f6;
+}
+.has-light-gray-background-color {
+    background: #f4f6f6;
 }

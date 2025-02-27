@@ -56,11 +56,10 @@
         }
     } ?>
     </div>
-
     <div id="search-modal" class="search-modal">
         <script src="https://www.google.com/jsapi"></script>
         <script src="https://cse.google.com/cse.js?cx=014080162503224819692:afbeo7xiquu"></script>
-        <div class="gcse-search" enableOrderBy="true"></div>
+        <div class="gcse-search" enableOrderBy="true" data-as_sitesearch="<?php echo get_option( 'same_site_search' ) ? $_SERVER['SERVER_NAME'] : ''; ?>"></div>
         <button id="close-search-button" class="close-search" onclick="hideSearchModal();"><img class="search-icon" alt="close search" src="/wp-content/themes/ufl-main-uni/img/x.PNG"></button>
     </div>
 

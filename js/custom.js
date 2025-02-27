@@ -1140,6 +1140,7 @@ jQuery(document).ready(function () {
 
 /* Further Code Custimizations */
 
+/* Section Navigation Load Onto Children if possible */
 function setSectionNavigation(){
     var pathname = window.location.pathname;
     var buildPath = '';
@@ -1153,6 +1154,7 @@ function setSectionNavigation(){
     }); 
 }
 
+/* Display search and related */
 function displaySearchModal(){
     const searchModal = document.getElementById('search-modal');
     searchModal.style.display = 'block';
@@ -1224,4 +1226,17 @@ function displaySearchModal(){
   
   window.addEventListener('load', function() {
       addPollTillReplaceBoldTagsToPopup();
+  });
+
+  /* Make main navigation dropdowns narrower if they have fewer elements */
+  jQuery( document ).ready(function() {
+    jQuery('#main-nav-ul > .menu-item-has-children > .dropdown-menu').each(function(){
+        if (jQuery(this).children('li').length == 1) {
+            jQuery(this).addClass('navbar-one-column');
+        }
+  
+        if (jQuery(this).children('li').length == 2) {
+            jQuery(this).addClass('navbar-two-columns');
+        }
+    });
   });
