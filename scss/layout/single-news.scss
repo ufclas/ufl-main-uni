@@ -28,7 +28,7 @@
       text-align: left;
       color: #fff;
       text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.39);
-      font-family: "gentonasemibold";
+      font-family: "IBM Plex semibold";
       position: relative;
       z-index: 9999;
       max-width: calc(14% + 1074px);
@@ -136,7 +136,7 @@
       font-size: 22px;
       line-height: 34px;
       color: #343741;
-      font-family: "gentonamedium";
+      font-family: "IBM Plex medium";
 
       @media only screen and (min-width: 800px) {
         font-size: 22px;
@@ -195,7 +195,7 @@
           font-size: 18px;
           line-height: 28px;
           text-decoration: none;
-          font-family: "gentonamedium";
+          font-family: "IBM Plex medium";
 
           @media only screen and (min-width: 800px) {
             font-size: 20px;
@@ -225,7 +225,7 @@
     text-align: left;
     color: #000;
     margin-bottom: 60px;
-    font-family: "gentonalight";
+    font-family: "IBM Plex light";
   }
 
   .single-news-related-content {
@@ -289,7 +289,7 @@
       line-height: 22px;
       text-align: left;
       color: #000;
-      font-family: "gentonasemibold";
+      font-family: "IBM Plex semibold";
       margin-top: 20px;
     }
 
@@ -336,7 +336,7 @@
 
 
 .single-news-date {
-  font-family: "gentonalight";
+  font-family: "IBM Plex light";
   font-size: 20px;
   line-height: 28px;
   color: #313535;

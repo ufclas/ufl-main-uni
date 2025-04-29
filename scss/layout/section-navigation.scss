@@ -54,7 +54,7 @@
       .close-btn {
         font-size: 20px;
         line-height: 24px;
-        font-family: "gentonabook";
+        font-family: "IBM Plex regular";
 
         &:before {
           max-width: 13px;
@@ -87,7 +87,7 @@
 
       .current-menu-item {
         color: #000;
-        font-family: "gentonasemibold";
+        font-family: "IBM Plex semibold";
       }
 
       .current-page {
@@ -96,7 +96,7 @@
 
         p {
           color: #000;
-          font-family: "gentonasemibold";
+          font-family: "IBM Plex semibold";
           padding-left: 10px;
           padding-top: 10px;
           padding-bottom: 10px;
@@ -122,7 +122,7 @@
       li {
         font-size: 18px;
         line-height: 42px;
-        font-family: "gentonabook";
+        font-family: "IBM Plex regular";
         text-align: left;
         color: #0021a5;
         margin-bottom: 0;
@@ -139,7 +139,7 @@
           line-height: 42px;
           text-align: left;
           color: #0021a5;
-          font-family: "gentonabook";
+          font-family: "IBM Plex regular";
           display: block;
           border-bottom: 0.5px dotted #fa4616;
           position: relative;
@@ -257,5 +257,5 @@
 
 #section-nav-ul .current_page_item > a {
   color: #000;
-  font-family: "gentonasemibold";
+  font-family: "IBM Plex semibold";
 }

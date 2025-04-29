@@ -41,7 +41,7 @@ $color_hover: (
     padding: 15px 43px;
     position: relative;
     font-size: 26px;
-    font-family: "gentonasemibold", Arial, sans-serif;
+    font-family: "IBM Plex semibold", Arial, sans-serif;
     text-align: center;
     user-select: none;
     vertical-align: middle;
@@ -96,7 +96,7 @@ $color_hover: (
   .is-style-animated-underline .wp-block-button__link {
     display: inline-block;
     color: #313535;
-    font-family: "gentonamediumitalic";
+    font-family: "IBM Plex medium italic";
     font-size: 19px;
     letter-spacing: -0.01em;
     line-height: 24px;
@@ -141,7 +141,7 @@ $color_hover: (
   padding: 15px 43px;
   position: relative;
   font-size: 26px;
-  font-family: "gentonasemibold", Arial, sans-serif;
+  font-family: "IBM Plex semibold", Arial, sans-serif;
   text-align: center;
   user-select: none;
   vertical-align: middle;
@@ -255,7 +255,7 @@ $color_hover: (
 .animated-underline-button {
   display: inline-block;
   color: #313535;
-  font-family: "gentonamediumitalic";
+  font-family: "IBM Plex medium italic";
   font-size: 19px;
   letter-spacing: -0.01em;
   line-height: 24px;
@@ -364,7 +364,7 @@ $color_hover: (
       line-height: 40px;
       text-align: center;
       color: #343741;
-      font-family: "gentonasemibold";
+      font-family: "IBM Plex semibold";
       display: block;
     }
 
@@ -374,7 +374,7 @@ $color_hover: (
       line-height: 38px;
       text-align: center;
       color: #000;
-      font-family: "gentonabook";
+      font-family: "IBM Plex regular";
       padding: 5px;
       transition: all 0.4s ease-in-out;
     }

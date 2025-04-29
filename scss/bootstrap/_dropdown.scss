@@ -192,13 +192,6 @@
     @include gradient-bg(var(--#{$prefix}dropdown-link-hover-bg));
   }
 
-  &.active,
-  &:active {
-    color: var(--#{$prefix}dropdown-link-active-color);
-    text-decoration: none;
-    @include gradient-bg(var(--#{$prefix}dropdown-link-active-bg));
-  }
-
   &.disabled,
   &:disabled {
     color: var(--#{$prefix}dropdown-link-disabled-color);
