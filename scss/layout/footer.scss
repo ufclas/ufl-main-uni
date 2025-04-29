@@ -45,7 +45,7 @@
         color: #fff;
         display: flex;
         align-items: center;
-        font-family: "gentonabookbold";
+        font-family: "IBM Plex bold";
         overflow-wrap: break-word !important;
         white-space: inherit !important;
 
@@ -54,8 +54,8 @@
         }
 
         @media (min-width: 800px) {
-          font-size: 24px;
-          line-height: 25px;
+          font-size: 23px;
+          line-height: 24px;
         }
 
         img {
@@ -82,23 +82,23 @@
 
       .footer-address-col {
         a {
-          font-family: "gentonamedium";
+          font-family: "IBM Plex medium";
         }
       }
 
       p {
         margin: 0;
-        font-size: 21px;
+        font-size: 20px;
         font-weight: 300;
         color: #ffffff;
-        font-family: "gentonalight";
+        font-family: "IBM Plex light";
       }
 
       a {
         color: #f4f6f6;
         text-decoration: none;
-        font-size: 21px;
-        font-family: "gentonalight";
+        font-size: 20px;
+        font-family: "IBM Plex light";
 
         &:hover,
         &:focus {
@@ -110,8 +110,8 @@
 
       .widget-title {
         border-bottom: 4px solid #e8552f;
-        font-family: "gentonasemibold";
-        font-size: 24px;
+        font-family: "IBM Plex semibold";
+        font-size: 23px;
         line-height: 40px;
         text-align: left;
         color: #fff;
@@ -184,10 +184,10 @@
       font-size: 16px;
       margin-bottom: 10px;
       display: block;
-      font-family: "gentonalight";
+      font-family: "IBM Plex light";
 
       @media (min-width: 1050px) {
-        font-size: 21px;
+        font-size: 20px;
       }
 
       @media (min-width: 800px) {
@@ -196,12 +196,12 @@
 
 
       a {
-        font-size: 16px;
-        line-height: 32px;
+        font-size: 15px;
+        line-height: 31px;
         text-align: left;
         color: #fff;
         text-decoration: none;
-        font-family: "gentonalight";
+        font-family: "IBM Plex light";
 
         &:hover,
         &:focus {

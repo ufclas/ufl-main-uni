@@ -6,7 +6,7 @@ body {
   padding-top: 0px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: "Gentona", sans-serif;
+  font-family: "IBM Plex regular", sans-serif;
   overflow-x: hidden;
 }
 
@@ -33,33 +33,33 @@ p {
 
 h1,
 .h1 {
-  font-family: "gentonamedium";
-  font-size: 30px;
-  line-height: 34px;
+  font-family: "IBM Plex medium";
+  font-size: 28px;
+  line-height: 32px;
   color: #000;
 
   @media (min-width: 800px) {
-    font-size: 48px;
-    line-height: 54px;
+    font-size: 46px;
+    line-height: 52px;
   }
 }
 
 h2,
 .h2 {
-  font-family: "gentonalight";
+  font-family: "IBM Plex light";
   font-size: 36px;
   line-height: 42px;
   color: #000;
 
   @media (min-width: 800px) {
-    font-size: 58px;
-    line-height: 64px;
+    font-size: 56px;
+    line-height: 62px;
   }
 }
 
 h3,
 .h3 {
-  font-family: "gentonabook";
+  font-family: "IBM Plex regular";
   font-size: 30px;
   line-height: 38px;
   color: #000;
@@ -67,14 +67,14 @@ h3,
 
 h4,
 .h4 {
-  font-family: "gentonasemibold";
+  font-family: "IBM Plex semibold";
   font-size: 22px;
   line-height: 28px;
   color: #000;
 }
 
 p {
-  font-family: "gentonalight";
+  font-family: "IBM Plex light";
   font-size: 20px;
   line-height: 28px;
   color: #313535;
@@ -82,7 +82,7 @@ p {
 
 ul li,
 ol li {
-  font-family: "gentonalight";
+  font-family: "IBM Plex light";
   font-size: 20px;
   line-height: 28px;
   color: #313535;
@@ -111,7 +111,7 @@ ol li {
     padding-left: 10px;
 
     &::marker {
-      font-family: "gentonamedium";
+      font-family: "IBM Plex medium";
       font-size: 20px;
       line-height: 28px;
       color: #0021a5;
@@ -126,7 +126,7 @@ ol li {
   li {
 
     &::marker {
-      font-family: "gentonamedium";
+      font-family: "IBM Plex medium";
       font-size: 20px;
       line-height: 28px;
       color: #0021a5;
@@ -170,7 +170,7 @@ ol li {
     }
 
     th {
-      font-family: "gentonasemibold";
+      font-family: "IBM Plex semibold";
       font-size: 22px;
       line-height: 38px;
       text-align: left;
@@ -184,7 +184,7 @@ ol li {
       line-height: 38px;
       text-align: left;
       color: #313535;
-      font-family: "gentonalight";
+      font-family: "IBM Plex light";
       min-width: 175px;
 
       &:nth-of-type(odd) {
@@ -244,7 +244,7 @@ ol li {
   }
 
   th {
-    font-family: "gentonasemibold";
+    font-family: "IBM Plex semibold";
     font-size: 22px;
     line-height: 38px;
     text-align: left;
@@ -261,7 +261,7 @@ ol li {
     line-height: 38px;
     text-align: left;
     color: #313535;
-    font-family: "gentonalight";
+    font-family: "IBM Plex light";
     min-width: 175px;
     border-right: 1px solid #8a9397 !important;
     border-bottom: 0;
@@ -309,7 +309,7 @@ ol li {
   }
 
   th {
-    font-family: "gentonasemibold";
+    font-family: "IBM Plex semibold";
     font-size: 22px;
     line-height: 38px;
     text-align: left;
@@ -323,7 +323,7 @@ ol li {
     line-height: 38px;
     text-align: left;
     color: #313535;
-    font-family: "gentonalight";
+    font-family: "IBM Plex light";
     min-width: 175px;
 
     &:nth-of-type(odd) {
@@ -413,10 +413,74 @@ ol li {
 
 @font-face {
   font-display: swap;
+  font-family: "IBM Plex bold italic";
+  src: url(../fonts//IBMPlexSans-BoldItalic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "IBM Plex regular";
+  src: url(../fonts//IBMPlexSans-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "IBM Plex bold";
+  src: url(../fonts//IBMPlexSans-Bold.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "IBM Plex italic";
+  src: url(../fonts//IBMPlexSans-Italic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "IBM Plex light";
+  src: url(../fonts//IBMPlexSans-Light.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "IBM Plex medium";
+  src: url(../fonts//IBMPlexSans-Medium.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "IBM Plex medium italic";
+  src: url(../fonts//IBMPlexSans-MediumItalic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "IBM Plex semibold";
+  src: url(../fonts//IBMPlexSans-SemiBold.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* The following "gentona" definitions are intended to support legacy references to the fonts and are intended to be removed in a future version. */
+@font-face {
+  font-display: swap;
   font-family: "gentonabbitalic";
-  src: url(../fonts//gentona_bold_bold_italic) format("ttf"),
-    url(../fonts//gentona_bold_bold_italic.woff) format("woff"),
-    url(../fonts//gentona_bold_bold_italic.woff2) format("woff2");
+  src: url(../fonts//IBMPlexSans-BoldItalic.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -424,9 +488,7 @@ ol li {
 @font-face {
   font-display: swap;
   font-family: "gentonabook";
-  src: url(../fonts//gentona_book) format("ttf"),
-    url(../fonts//gentona_book.woff) format("woff"),
-    url(../fonts//gentona_book.woff2) format("woff2");
+  src: url(../fonts//IBMPlexSans-Regular.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -434,9 +496,7 @@ ol li {
 @font-face {
   font-display: swap;
   font-family: "gentonabookbold";
-  src: url(../fonts//gentona_book_bold) format("ttf"),
-    url(../fonts//gentona_book_bold.woff) format("woff"),
-    url(../fonts//gentona_book_bold.woff2) format("woff2");
+  src: url(../fonts//IBMPlexSans-Bold.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -444,9 +504,7 @@ ol li {
 @font-face {
   font-display: swap;
   font-family: "gentonabookitalic";
-  src: url(../fonts//gentona_book_italic) format("ttf"),
-    url(../fonts//gentona_book_italic.woff) format("woff"),
-    url(../fonts//gentona_book_italic.woff2) format("woff2");
+  src: url(../fonts//IBMPlexSans-Italic.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -454,9 +512,7 @@ ol li {
 @font-face {
   font-display: swap;
   font-family: "gentonaextrabold";
-  src: url(../fonts//gentona_extra_bold) format("ttf"),
-    url(../fonts//gentona_extra_bold.woff) format("woff"),
-    url(../fonts//gentona_extra_bold.woff2) format("woff2");
+  src: url(../fonts//IBMPlexSans-Bold.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -464,9 +520,7 @@ ol li {
 @font-face {
   font-display: swap;
   font-family: "gentonaextrabolditalic";
-  src: url(../fonts//gentona_extra_bold_italic) format("ttf"),
-    url(../fonts//gentona_extra_bold_italic.woff) format("woff"),
-    url(../fonts//gentona_extra_bold_italic.woff2) format("woff2");
+  src: url(../fonts//IBMPlexSans-BoldItalic.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -474,9 +528,7 @@ ol li {
 @font-face {
   font-display: swap;
   font-family: "gentonaheavy";
-  src: url(../fonts//gentona_heavy) format("ttf"),
-    url(../fonts//gentona_heavy.woff) format("woff"),
-    url(../fonts//gentona_heavy.woff2) format("woff2");
+  src: url(../fonts//IBMPlexSans-Bold.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -484,9 +536,7 @@ ol li {
 @font-face {
   font-display: swap;
   font-family: "gentonaheavyitalic";
-  src: url(../fonts//gentona_heavy_italic) format("ttf"),
-    url(../fonts//gentona_heavy_italic.woff) format("woff"),
-    url(../fonts//gentona_heavy_italic.woff2) format("woff2");
+  src: url(../fonts//IBMPlexSans-BoldItalic.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -494,9 +544,7 @@ ol li {
 @font-face {
   font-display: swap;
   font-family: "gentonalight";
-  src: url(../fonts//gentona_light) format("ttf"),
-    url(../fonts//gentona_light.woff) format("woff"),
-    url(../fonts//gentona_light.woff2) format("woff2");
+  src: url(../fonts//IBMPlexSans-Light.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -504,9 +552,7 @@ ol li {
 @font-face {
   font-display: swap;
   font-family: "gentonamedium";
-  src: url(../fonts//gentona_medium) format("ttf"),
-    url(../fonts//gentona_medium.woff) format("woff"),
-    url(../fonts//gentona_medium.woff2) format("woff2");
+  src: url(../fonts//IBMPlexSans-Medium.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -514,9 +560,7 @@ ol li {
 @font-face {
   font-display: swap;
   font-family: "gentonamediumitalic";
-  src: url(../fonts//gentona_medium_italic) format("ttf"),
-    url(../fonts//gentona_medium_italic.woff) format("woff"),
-    url(../fonts//gentona_medium_italic.woff2) format("woff2");
+  src: url(../fonts//IBMPlexSans-MediumItalic.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -524,9 +568,7 @@ ol li {
 @font-face {
   font-display: swap;
   font-family: "gentonasemibold";
-  src: url(../fonts//gentona_semi_bold) format("ttf"),
-    url(../fonts//gentona_semi_bold.woff) format("woff"),
-    url(../fonts//gentona_semi_bold.woff2) format("woff2");
+  src: url(../fonts//IBMPlexSans-SemiBold.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -622,7 +664,7 @@ ol li {
 }
 
 .fullwidth-text-block a {
-  font-family: "gentonamedium";
+  font-family: "IBM Plex medium";
   color: #0021a5;
   text-decoration: none;
 
@@ -702,7 +744,7 @@ ol li {
       text-align: left;
       color: #fff;
       text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.39);
-      font-family: "gentonasemibold";
+      font-family: "IBM Plex semibold";
       position: relative;
       z-index: 9999;
       max-width: calc(14% + 1074px);
@@ -760,7 +802,7 @@ ol li {
       font-size: 22px;
       line-height: 34px;
       color: #343741;
-      font-family: "gentonamedium";
+      font-family: "IBM Plex medium";
 
       @media only screen and (min-width: 800px) {
         font-size: 22px;
@@ -819,7 +861,7 @@ ol li {
           font-size: 18px;
           line-height: 28px;
           text-decoration: none;
-          font-family: "gentonamedium";
+          font-family: "IBM Plex medium";
 
           @media only screen and (min-width: 800px) {
             font-size: 20px;
@@ -849,7 +891,7 @@ ol li {
     text-align: left;
     color: #000;
     margin-bottom: 60px;
-    font-family: "gentonalight";
+    font-family: "IBM Plex light";
   }
 
   .single-news-related-content {
@@ -908,7 +950,7 @@ ol li {
       line-height: 22px;
       text-align: left;
       color: #000;
-      font-family: "gentonasemibold";
+      font-family: "IBM Plex semibold";
       margin-top: 20px;
     }
 
@@ -985,7 +1027,7 @@ ol li {
   color: #fff;
   display: flex;
   align-items: center;
-  font-family: "gentonabookbold";
+  font-family: "IBM Plex bold";
   overflow-wrap: break-word !important;
   white-space: inherit !important;
   transition: none !important;
@@ -996,8 +1038,8 @@ ol li {
   }
 
   @media (min-width: 800px) {
-    font-size: 24px;
-    line-height: 25px;
+    font-size: 23px;
+    line-height: 24px;
   }
 
   .alt-logo-txt {
@@ -1065,7 +1107,7 @@ ol li {
   background-color: $primary-blue;
   text-decoration: none;
   font-size: 18px;
-  font-family: "gentonabook";
+  font-family: "IBM Plex regular";
 
   span {
     display: flex;

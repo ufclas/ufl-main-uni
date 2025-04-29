@@ -35,7 +35,7 @@
         font-size: 20px;
         line-height: 35px;
         color: #0021A5;
-        font-family: 'gentonamedium',Arial,sans-serif;
+        font-family: "IBM Plex medium",Arial,sans-serif;
 
         @media (min-width: 800px) {
             font-size: 26px;
@@ -43,7 +43,7 @@
         }
 
         &::placeholder {
-            font-family: 'gentonamedium',Arial,sans-serif;
+            font-family: "IBM Plex medium",Arial,sans-serif;
             opacity: 1;
             color: #0021A5;
         }

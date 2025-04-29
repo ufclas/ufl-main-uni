@@ -46,14 +46,21 @@ jQuery(document).ready(function ($) {
 
 
     // Desktop Navigation Dropdown Offset
-    jQuery(".header .dropdown-toggle").on("mouseover focus", function (event) {
+    jQuery(".header #main-nav-ul > li").on("mouseover focusin", function(event) {
         if (jQuery(window).width() > 1055) {
-            var liparent = jQuery(this.parentElement);
-            var xOffset = liparent.offset().left;
-            var something = jQuery(this).next().next();
+            var offset = jQuery(this).offset().left,
+                dropdown = jQuery(this).find('.dropdown-menu'),
+                dropdownWidth = dropdown.outerWidth(),
+                windowWidth = jQuery(window).width();
+    
+            // Reset transform
+            dropdown.css({'left':'0px'});
 
-            if (xOffset > 700) {
-                jQuery(this).next().next().css("left", "unset");
+            if (offset + dropdownWidth > windowWidth) {
+                var overflow = (offset + dropdownWidth) - windowWidth;
+                
+                // Adjust transform to fit within screen boundaries
+                dropdown.css({'left': '-' + overflow + 'px'});
             }
         }
     });

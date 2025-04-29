@@ -1344,13 +1344,6 @@ function enable_featured_post_meta_rest() {
 add_action('init', 'enable_featured_post_meta_rest');
 
 
-function enqueue_livewhale_style() {
-wp_enqueue_style( 'event-shell-style', 'https://template.t03.wp.it.ufl.edu/wp-content/plugins/ufl-block/build/event-shell/style-index.css', array(), '0.1.0', 'all' );
-wp_enqueue_style( 'event-shell-button-wrapper-style', 'https://template.t03.wp.it.ufl.edu/wp-content/plugins/ufl-block/build/event-shell-button-wrapper/style-index.css', array(), '0.1.0', 'all' );
-wp_enqueue_style( 'event-shell-buttons-style', 'https://template.t03.wp.it.ufl.edu/wp-content/plugins/ufl-block/build/event-shell-buttons/style-index.css', array(), '0.1.0', 'all' );
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_livewhale_style' );
-
 function liveWhale($atts){ 
   
 $atts = shortcode_atts(

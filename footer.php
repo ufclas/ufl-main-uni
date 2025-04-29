@@ -171,7 +171,7 @@
 <?php get_template_part('template-parts/content', 'offcanvas-search'); ?>
 <?php
 $enable_feature = get_option('enable_feature');
-$nav_display = $_SESSION['nav_display']; 
+$nav_display = isset($_SESSION['nav_display']) ? $_SESSION['nav_display'] : ''; 
 if($enable_feature == 'yes' && (!isset($_SESSION['nav_display']))){
 	
 ?>
@@ -255,7 +255,7 @@ jQuery(document).ready(function(){
 			<script>
 	jQuery(document).ready(function(){
 		
-    var session_nav  = <?php echo json_encode($_SESSION['nav_display']); ?>;
+    var session_nav  = <?php if(isset($_SESSION['nav_display'])) {echo json_encode($_SESSION['nav_display']);} ?>;
 		
 		jQuery('.section-navigation .section-navigation-inner').removeClass('menu-active');
 		jQuery('.section-navigation .section-menu-btn').removeClass('menu-enabled');

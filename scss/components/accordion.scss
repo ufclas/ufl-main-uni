@@ -24,7 +24,7 @@
     .accordion-button {
       color: #0021a5;
       font-size: 26px;
-      font-family: "gentonasemibold";
+      font-family: "IBM Plex semibold";
       position: relative;
 
       &:before {
@@ -62,7 +62,7 @@
     .accordion-body {
       position: relative;
       z-index: 9999;
-      font-family: "gentonalight";
+      font-family: "IBM Plex light";
       font-size: 20px;
       line-height: 28px;
       color: #000;
@@ -70,10 +70,10 @@
 
       
       strong {
-        font-family: "gentonamedium";
+        font-family: "IBM Plex medium";
       }
       .accordion-body-wrap a {
-        font-family: "gentonamedium";
+        font-family: "IBM Plex medium";
         color: #0021a5;
         text-decoration: none;
       
@@ -91,7 +91,7 @@
      .accordion-btn-wrap a {
           display: inline-block;
           color: #313535;
-          font-family: "gentonamediumitalic";
+          font-family: "IBM Plex medium italic";
           font-size: 19px;
           letter-spacing: -0.01em;
           line-height: 24px;
