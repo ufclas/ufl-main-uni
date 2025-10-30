@@ -12,7 +12,7 @@ $postid = get_option('page_for_posts');
     <div class="container">
       <div class="row">
         <div class="title-wrapper">
-          <h2 class="font-heading">FIND NEWS & STORIES</h2>
+          <h2 class="font-heading"><?php the_title(); ?></h2>
           <hr/>
         </div>
 

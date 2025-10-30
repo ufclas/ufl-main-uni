@@ -156,7 +156,14 @@ jQuery(document).ready(function ($) {
     });
 
     // HERO SECTION VERTICAL REDLINE PARALLAX ON SCROLL
-    jQuery(".verScroll_Col").prependTo(jQuery(".hero-wrapper"));
+    jQuery(".verScroll_Col").each(function() {
+        var currentCol = jQuery(this);
+        var correspondingHero = currentCol.closest(".hero-wrapper");
+        if (correspondingHero.length > 0) {
+          currentCol.prependTo(correspondingHero);
+        }
+    });
+
     if (jQuery("#object1").length > 0) {
         jQuery('#object1').css({
             'top': 45 + 'px'
@@ -1247,3 +1254,18 @@ function displaySearchModal(){
         }
     });
   });
+
+  //*Add ReciteMe */
+   var serviceUrl = "//api.reciteme.com/asset/js?key=";
+    var serviceKey = "219f1f000e069656244a0b2703309e4ea58e468c";
+    var options = {};  // Options can be added as needed
+    var autoLoad = false;
+    var enableFragment = "#reciteEnable";
+    var loaded = [], frag = !1; window.location.hash === enableFragment && (frag = !0); function loadScript(c, b) { var a = document.createElement("script"); a.type = "text/javascript"; a.readyState ? a.onreadystatechange = function () { if ("loaded" == a.readyState || "complete" == a.readyState) a.onreadystatechange = null, void 0 != b && b() } : void 0 != b && (a.onload = function () { b() }); a.src = c; document.getElementsByTagName("head")[0].appendChild(a) } function _rc(c) { c += "="; for (var b = document.cookie.split(";"), a = 0; a < b.length; a++) { for (var d = b[a]; " " == d.charAt(0);)d = d.substring(1, d.length); if (0 == d.indexOf(c)) return d.substring(c.length, d.length) } return null } function loadService(c) { for (var b = serviceUrl + serviceKey, a = 0; a < loaded.length; a++)if (loaded[a] == b) return; loaded.push(b); loadScript(serviceUrl + serviceKey, function () { "function" === typeof _reciteLoaded && _reciteLoaded(); "function" == typeof c && c(); Recite.load(options); Recite.Event.subscribe("Recite:load", function () { Recite.enable() }) }) } "true" == _rc("Recite.Persist") && loadService(); if (autoLoad && "false" != _rc("Recite.Persist") || frag) document.addEventListener ? document.addEventListener("DOMContentLoaded", function (c) { loadService() }) : loadService();
+
+/* Removes focus indicator from radio buttons and checkboxes on click, but not keyboard */    
+jQuery("input[type=checkbox], input[type=radio]").on('click', function(e){
+    if (e.clientX !== 0 || e.clientY !== 0) {
+        jQuery(this).blur();
+    }
+});

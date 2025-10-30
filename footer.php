@@ -18,8 +18,6 @@
 ?>
 
 
-
-
 <!-- START FOOTER WRAPPER -->
 <div class="footer-wrapper position-relative">
   <div id="footerTopBorder" style="width: 1%;"></div>
@@ -281,8 +279,36 @@ jQuery(document).ready(function(){
 		});
 });	
 </script>
-<?php }
+<?php }?>
 
-?>
+ <?php
+    $extra_classes = '';
+    if (get_theme_mod('toggle_recite_me_button', true)) {
+    $extra_classes .= ' shadow showFloatReciteMebtn';
+    }
+  ?>
+<button 
+	aria-label="Launch Recite Me assistive technology"
+	class="reciteMe-btn-blue<?php echo $extra_classes;	?>"
+    role="button"
+   	id="enableRecite"
+>
+	<span class="acc-icon relative flex-none"></span>
+</button>
+
+<script>
+document.getElementById('enableRecite').addEventListener("click", function() {
+  if (typeof loadService !== 'undefined' && typeof loadService === 'function') {
+        loadService();
+  } else {
+    console.warn('Recite Me is not ready yet.');
+  } 
+   
+
+});
+</script>	
+
+
+
 </body>
 </html>
