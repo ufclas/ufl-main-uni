@@ -137,18 +137,21 @@ ol li {
 .wp-block-table {
   max-width: calc(1640px - 14%);
   margin: 2.5% auto;
-  padding: 20px 7%;
-  overflow-x: scroll;
+  padding: 20px 0;
+  overflow-x: auto;
   scrollbar-color: #f3f1e9 #fa4616;
+  
+  .aligncenter, .alignleft, .alignright{
+    display:block;
+  }
 
   td,
   th {
     border: 0px solid;
   }
 
-
   table {
-    overflow-x: scroll;
+    overflow-x: auto;
     max-width: 1640px;
     margin-left: auto;
     margin-right: auto;
@@ -224,7 +227,7 @@ ol li {
   margin-bottom: 0;
   border-left: none;
   border-right: none;
-  overflow-x: scroll;
+  overflow-x: auto;
   border-top: 1px solid #8a9397 !important;
   border-bottom: 1px solid #8a9397 !important;
 
@@ -287,7 +290,7 @@ ol li {
 }
 
 .is-style-regular table {
-  overflow-x: scroll;
+  overflow-x: auto;
   max-width: 1640px;
   margin-left: auto;
   margin-right: auto;

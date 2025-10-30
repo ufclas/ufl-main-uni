@@ -587,6 +587,34 @@ $wp_customize->add_setting('header_link', array(
   ));
   
 
+	// Add a checkbox control for ReciteMe Button
+$wp_customize->add_section( 'recite_me_toggler',
+  array(
+      'title'      => esc_html__( 'ReciteMe Visibility Options', 'custom_theme' ),
+      'priority'   => 1,
+      'capability' => 'edit_theme_options',
+));
+$wp_customize->add_setting( 'toggle_recite_me_button', array(
+	'default'           => true,
+	'sanitize_callback' => 'sanitize_checkbox',
+  'type'              => 'theme_mod',
+) );
+$wp_customize->add_control( 'toggle_recite_me_button', array(
+	'label'    => esc_html__( 'Check to show floating ReciteMe Button', 'custom-theme' ),
+	'section'  => 'recite_me_toggler',
+	'type'     => 'checkbox',
+) );
+$wp_customize->add_setting( 'navbar_recite_me_button', array(
+	'default'           => false,
+	'sanitize_callback' => 'sanitize_checkbox',
+  'type'              => 'theme_mod',
+) );
+$wp_customize->add_control( 'navbar_recite_me_button', array(
+	'label'    => esc_html__( 'Check to show navigation bar ReciteMe Button', 'custom-theme' ),
+	'section'  => 'recite_me_toggler',
+	'type'     => 'checkbox',
+) );
+
 // Add Alternate Logo Section 
 $wp_customize->add_section( 'mytheme_section', array(
 	'title'    => __( 'Alternate Logo Section', 'custom-theme' ),
@@ -854,22 +882,24 @@ function ufl_crt_metaBox_menu($post){
 	$ufl_nav_menu_show = get_post_meta($post->ID, 'ufl_nav_menu_show', true);
 ?>
 	<p class="ufl_checkbox">
-    	<span>Disable Breadcrumb on Page</span>
-        <input type="checkbox" name="ufl_nav_menu_show" id="ufl_nav_menu_show" value="1" <?php echo ($ufl_nav_menu_show == 1) ? 'checked="checked"' : ''; ?> />
-    </p>
+  	<span>Disable Breadcrumb on Page</span>
+    <input type="checkbox" name="ufl_nav_menu_show" id="ufl_nav_menu_show" value="1" <?php echo ($ufl_nav_menu_show == 1) ? 'checked="checked"' : ''; ?> />
+  </p>
 
 
 <?php
 }
 add_action('save_post', 'ufl_save_menu_metaBox');
-function ufl_save_menu_metaBox(){
-	global $post;
-	$ufl_nav_menu_show = [];
-	$ufl_nav_menu_show = isset( $_POST['ufl_nav_menu_show'] ) ? $_POST['ufl_nav_menu_show'] : '';
-	if ($ufl_nav_menu_show ) {
-		update_post_meta($post->ID, 'ufl_nav_menu_show', $ufl_nav_menu_show);
-	}
+function ufl_save_menu_metaBox($post_id) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    if (!current_user_can('edit_post', $post_id)) return;
 
+    // Check if our checkbox was submitted
+    if (isset($_POST['ufl_nav_menu_show'])) {
+      update_post_meta($post_id, 'ufl_nav_menu_show', '1');
+    } else {
+      update_post_meta($post_id, 'ufl_nav_menu_show', '0');
+    }
 }
 
 //========> Admin CSS

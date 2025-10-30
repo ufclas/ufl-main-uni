@@ -10,33 +10,26 @@ Requires PHP: 5.6
 License URI: https://ufl.edu
 Text Domain: ufl
 Tags: featured-images, threaded-comments, translation-ready
-
 Use this theme to make something cool, have fun, and share what you've learned with others.
-
 */
-
 
 /* 
 All style editing is done via scss/_bscore_custom.scss
 */
-
 /* Non-vendor custom styling */
 :root {
     --core-orange: #FA4616;
     --core-blue: #0021A5;
-
     --bottlebrush: #D32737;
     --alachua: #F2A900;
     --gator: #22884C;
     --dark-blue: #002657;
     --perennial: #6A2A60;
-
     --white: #fff;
     --cool-gray-11: #343741;
     --cool-gray-3: #C7C9C8;
     --warm-grey-1: #D8D4D7;
     --black: #000;
-
     --social-media-icons-background: #3350a5;
     --social-media-icons-background-hover: #ffffff;
     --social-media-icons-hover: #0021a5;
@@ -215,7 +208,7 @@ body.search-has-run.search-open {
 .search-modal div.gsc-results .gsc-cursor-box .gsc-cursor-page {
     display: inline-block;
     color: white;
-    background: var(--core-blue);
+    background-color: var(--core-blue);
     border: 2px solid var(--core-blue);
     width: 28px;
     line-height: 28px;
@@ -278,33 +271,93 @@ table.gssb_c {
 }
 
 /****** Form CSS March 2023 ************/
+#main .gform_wrapper,
+#main-content.form-ufl {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+
+    #main .gform_wrapper,
+    #main-content.form-ufl {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    #main .gform_wrapper,
+    #main-content.form-ufl {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 1050px) {
+
+    #main .gform_wrapper,
+    #main-content.form-ufl {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1240px) {
+
+    #main .gform_wrapper,
+    #main-content.form-ufl {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1410px) {
+
+    #main .gform_wrapper,
+    #main-content.form-ufl {
+        max-width: 1320px;
+    }
+}
+
+#main .gform_wrapper hr,
 #main-content.form-ufl hr {
     border-top: 2px solid #FA4616;
     opacity: 1;
 }
 
+#main .gform_wrapper h3,
 #main-content.form-ufl h3 {
     color: #0021A5;
     font-family: var(--semi-bold-sans);
     margin-top: 100px;
 }
 
+#main .gform_wrapper legend,
+#main .gform_wrapper label,
 #main-content.form-ufl legend,
 #main-content.form-ufl label {
     font-size: 1.25rem;
     font-family: var(--medium-weight-sans);
 }
 
+#main .gform_wrapper input[type="radio"],
+#main .gform_wrapper input[type="checkbox"],
 #main-content.form-ufl input[type="radio"],
 #main-content.form-ufl input[type="checkbox"] {
     margin: 15px 0;
     -moz-appearance: none;
 }
 
+#main .gform_wrapper input[type="radio"]+label,
+#main .gform_wrapper input[type="checkbox"]+label,
 #main-content.form-ufl input[type="radio"]+label,
 #main-content.form-ufl input[type="checkbox"]+label {
     font-size: 1.25rem;
     font-family: var(--light-weight-sans);
+    margin-left: -16px;
 }
 
 /* The container */
@@ -354,6 +407,7 @@ table.gssb_c {
 }
 
 /* Create a custom radio button */
+#main .gform_wrapper .checkmark,
 #main-content.form-ufl .checkmark {
     position: absolute;
     top: 5px;
@@ -365,15 +419,18 @@ table.gssb_c {
     border: 2px solid #FA4616;
 }
 
+#main .gform_wrapper .checkmark.square,
 #main-content.form-ufl .checkmark.square {
     border-radius: 0;
 }
 
 /* On mouse-over, add a grey background color */
+#main .gform_wrapper .btncontainer:hover input~.checkmark,
 #main-content.form-ufl .btncontainer:hover input~.checkmark {
     background-color: #FA4616;
 }
 
+#main .gform_wrapper .btncontainer:focus input~.checkmark,
 #main-content.form-ufl .btncontainer:focus input~.checkmark {
     background-color: #FA4616;
 }
@@ -395,11 +452,20 @@ table.gssb_c {
     display: block;
 }
 
+#main .gform_wrapper input[type=text],
+#main .gform_wrapper input[type=tel],
+#main .gform_wrapper input[type=time],
+#main .gform_wrapper input[type=email],
+#main .gform_wrapper input[type=number],
+#main .gform_wrapper input[type=url],
+#main .gform_wrapper select,
+#main .gform_wrapper select+button,
 #main-content.form-ufl input[type=text],
 #main-content.form-ufl input[type=tel],
 #main-content.form-ufl input[type=time],
 #main-content.form-ufl input[type=email],
 #main-content.form-ufl input[type=number],
+#main-content.form-ufl input[type=url],
 #main-content.form-ufl select,
 #main-content.form-ufl select+button {
     width: 100%;
@@ -413,23 +479,28 @@ table.gssb_c {
     margin-bottom: 30px;
     background-color: #F4F6F6;
     font-family: var(--light-weight-sans);
+    font-size: 16px;
 }
 
+#main .gform_wrapper input[type=number],
 #main-content.form-ufl input[type=number] {
     padding: 12px 11px;
     text-align: center;
 }
 
+#main .gform_wrapper select,
 #main-content.form-ufl select {
     padding: 12px 9px;
 }
 
+#main .gform_wrapper .gsection,
 #main-content.form-ufl .gsection {
     border-color: #FA4616;
     border-width: 2px;
     opacity: 1;
 }
 
+#main .gform_wrapper input[type=date],
 #main-content.form-ufl input[type=date] {
     width: 100%;
     padding: 12px 20px;
@@ -454,6 +525,7 @@ table.gssb_c {
 }
 
 /* The container must be positioned relative: */
+#main .gform_wrapper .custom-select,
 #main-content.form-ufl .custom-select {
     position: relative;
     font-family: var(--light-weight-sans);
@@ -469,16 +541,19 @@ table.gssb_c {
     background-color: #F4F6F6;
 }
 
+#main .gform_wrapper .custom-select select,
 #main-content.form-ufl .custom-select select {
     display: none;
     /*hide original SELECT element: */
 }
 
+#main .gform_wrapper .select-selected,
 #main-content.form-ufl .select-selected {
     background-color: #F4F6F6;
     color: #313535;
 }
 
+#main .gform_wrapper .select-selected:after,
 #main-content.form-ufl .select-selected:after {
     position: absolute;
     content: "\f077";
@@ -495,6 +570,7 @@ table.gssb_c {
 }
 
 /* Point the arrow upwards when the select box is open (active): */
+#main .gform_wrapper .select-selected.select-arrow-active:after,
 #main-content.form-ufl .select-selected.select-arrow-active:after {
     border-color: transparent transparent #fff transparent;
     top: 18px;
@@ -502,8 +578,10 @@ table.gssb_c {
 }
 
 /* style the items (options), including the selected item: */
+#main .gform_wrapper .select-items div,
+.select-selected,
 #main-content.form-ufl .select-items div,
-.select-selected {
+#main-content.form-ufl .select-selected {
     color: #0021A5;
     padding: 8px 16px;
     border: transparent;
@@ -516,6 +594,7 @@ table.gssb_c {
 }
 
 /* Style items (options): */
+#main .gform_wrapper .select-items,
 #main-content.form-ufl .select-items {
     position: absolute;
     background-color: #F4F6F6;
@@ -536,17 +615,21 @@ table.gssb_c {
 }
 
 /* Hide the items when the select box is closed: */
+#main .gform_wrapper .select-hide,
 #main-content.form-ufl .select-hide {
     display: none;
 }
 
+#main .gform_wrapper .select-items div:hover,
+.same-as-selected,
 #main-content.form-ufl .select-items div:hover,
-.same-as-selected {
+#main-content.form-ufl .same-as-selected {
     text-decoration: underline;
     text-decoration-color: #FA4616;
     text-underline-offset: 4px;
 }
 
+#main .gform_wrapper textarea,
 #main-content.form-ufl textarea {
     width: 100%;
     padding: 12px 20px;
@@ -562,12 +645,14 @@ table.gssb_c {
     font-family: var(--light-weight-sans);
 }
 
+#main .gform_wrapper input[type="date"],
 #main-content.form-ufl input[type="date"] {
     background: #F4F6F6 url(../img/calendar-blue.png) 5% 50% no-repeat;
     float: left;
     padding: 0px 50px;
 }
 
+#main .gform_wrapper [type="date"]::-webkit-calendar-picker-indicator,
 #main-content.form-ufl [type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
     position: absolute;
@@ -581,6 +666,7 @@ table.gssb_c {
     background: transparent;
 }
 
+#main .gform_wrapper [type="time"]::-webkit-calendar-picker-indicator,
 #main-content.form-ufl [type="time"]::-webkit-calendar-picker-indicator {
     opacity: 0;
     position: absolute;
@@ -594,6 +680,7 @@ table.gssb_c {
     background: transparent;
 }
 
+#main .gform_wrapper label.upload,
 #main-content.form-ufl label.upload {
     border: #fa4616 2px dotted;
     border-radius: 100px;
@@ -610,10 +697,12 @@ table.gssb_c {
     color: #0021A5;
 }
 
+#main .gform_wrapper label.upload:hover,
 #main-content.form-ufl label.upload:hover {
     background-color: #F4F6F6;
 }
 
+#main .gform_wrapper input::file-selector-button,
 #main-content.form-ufl input::file-selector-button {
     border: #fa4616 2px dotted;
     border-radius: 100px;
@@ -632,6 +721,7 @@ table.gssb_c {
     font-size: 1.25rem;
 }
 
+#main .gform_wrapper input::file-selector-button:hover,
 #main-content.form-ufl input::file-selector-button:hover {
     background-color: #F4F6F6;
 }
@@ -646,15 +736,27 @@ legend.txtBld {
     font-family: var(--medium-weight-sans);
 }
 
+#main .gform_wrapper [type="radio"]:checked+label,
 #main-content.form-ufl [type="radio"]:checked+label {
     font-family: var(--medium-weight-sans);
 }
 
+#main .gform_wrapper [type="radio"]:checked,
+#main .gform_wrapper [type="radio"]:not(:checked),
 #main-content.form-ufl [type="radio"]:checked,
 #main-content.form-ufl [type="radio"]:not(:checked) {
-    width: 0;
+    /* width: 0; */
+    left: -10000px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
 }
 
+#main .gform_wrapper [type="radio"]:not(:checked)+label,
 #main-content.form-ufl [type="radio"]:not(:checked)+label {
     position: relative;
     padding-left: 28px;
@@ -663,6 +765,7 @@ legend.txtBld {
     display: inline-block;
 }
 
+#main .gform_wrapper [type="radio"]:checked+label,
 #main-content.form-ufl [type="radio"]:checked+label {
     position: relative;
     padding-left: 28px;
@@ -672,6 +775,8 @@ legend.txtBld {
     font-family: var(--medium-weight-sans);
 }
 
+#main .gform_wrapper [type="radio"]:checked+label:before,
+#main .gform_wrapper [type="radio"]:not(:checked)+label:before,
 #main-content.form-ufl [type="radio"]:checked+label:before,
 #main-content.form-ufl [type="radio"]:not(:checked)+label:before {
     content: '';
@@ -685,6 +790,8 @@ legend.txtBld {
     border: 2px solid #FA4616;
 }
 
+#main .gform_wrapper [type="radio"]:checked+label:after,
+#main .gform_wrapper [type="radio"]:not(:checked)+label:after,
 #main-content.form-ufl [type="radio"]:checked+label:after,
 #main-content.form-ufl [type="radio"]:not(:checked)+label:after {
     content: '';
@@ -699,6 +806,7 @@ legend.txtBld {
     background-color: #FA4616;
 }
 
+#main .gform_wrapper input[type="radio"]:not(:checked):focus+label:before,
 #main-content.form-ufl input[type="radio"]:not(:checked):focus+label:before {
     content: "";
     display: inline-block;
@@ -710,9 +818,11 @@ legend.txtBld {
     border-radius: 100%;
     box-shadow: 0 0 1px #cccccc;
     vertical-align: text-top;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
 }
 
+
+#main .gform_wrapper input[type="checkbox"]:not(:checked):focus+label:before,
 #main-content.form-ufl input[type="checkbox"]:not(:checked):focus+label:before {
     content: "";
     display: inline-block;
@@ -724,15 +834,24 @@ legend.txtBld {
     border-radius: 0;
     box-shadow: 0 0 1px #cccccc;
     vertical-align: text-top;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
 }
 
+#main .gform_wrapper input[type="radio"]:focus+label:before,
+#main-content.form-ufl input[type="radio"]:focus+label:before,
+#main .gform_wrapper input[type="checkbox"]:focus+label:before,
+#main-content.form-ufl input[type="checkbox"]:focus+label:before {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+}
+
+#main .gform_wrapper [type="radio"]:not(:checked)+label:after,
 #main-content.form-ufl [type="radio"]:not(:checked)+label:after {
     opacity: 0;
     -webkit-transform: scale(0);
     transform: scale(0);
 }
 
+#main .gform_wrapper [type="radio"]:checked+label:after,
 #main-content.form-ufl [type="radio"]:checked+label:after {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -743,15 +862,27 @@ span.hozRadio {
     margin: 0 10px;
 }
 
+#main .gform_wrapper [type="checkbox"]:checked+label,
 #main-content.form-ufl [type="checkbox"]:checked+label {
     font-family: var(--medium-weight-sans);
 }
 
+#main .gform_wrapper [type="checkbox"]:checked,
+#main .gform_wrapper [type="checkbox"]:not(:checked),
 #main-content.form-ufl [type="checkbox"]:checked,
 #main-content.form-ufl [type="checkbox"]:not(:checked) {
-    width: 0;
+    /* width: 0; */
+    left: -10000px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
 }
 
+#main .gform_wrapper [type="checkbox"]:not(:checked)+label,
 #main-content.form-ufl [type="checkbox"]:not(:checked)+label {
     position: relative;
     padding-left: 28px;
@@ -760,6 +891,8 @@ span.hozRadio {
     display: inline-block;
 }
 
+#main .gform_wrapper [type="checkbox"]:checked+label,
+#main .gform_wrapper [type="checkbox"]:checked+label,
 #main-content.form-ufl [type="checkbox"]:checked+label {
     position: relative;
     padding-left: 28px;
@@ -770,6 +903,8 @@ span.hozRadio {
     font-family: var(--medium-weight-sans);
 }
 
+#main .gform_wrapper [type="checkbox"]:checked+label:before,
+#main .gform_wrapper [type="checkbox"]:not(:checked)+label:before,
 #main-content.form-ufl [type="checkbox"]:checked+label:before,
 #main-content.form-ufl [type="checkbox"]:not(:checked)+label:before {
     content: '';
@@ -783,6 +918,8 @@ span.hozRadio {
     border: 2px solid #FA4616;
 }
 
+#main .gform_wrapper [type="checkbox"]:checked+label:after,
+#main .gform_wrapper [type="checkbox"]:not(:checked)+label:after,
 #main-content.form-ufl [type="checkbox"]:checked+label:after,
 #main-content.form-ufl [type="checkbox"]:not(:checked)+label:after {
     content: '';
@@ -797,27 +934,28 @@ span.hozRadio {
     background-color: #FA4616;
 }
 
+#main .gform_wrapper [type="checkbox"]:not(:checked)+label:after,
 #main-content.form-ufl [type="checkbox"]:not(:checked)+label:after {
     opacity: 0;
     -webkit-transform: scale(0);
     transform: scale(0);
 }
 
+#main .gform_wrapper [type="checkbox"]:checked+label:after,
 #main-content.form-ufl [type="checkbox"]:checked+label:after {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
 }
 
+#main .gform_wrapper input[type="time"]::-webkit-calendar-picker-indicator,
 #main-content.form-ufl input[type="time"]::-webkit-calendar-picker-indicator {
     display: none;
 }
 
-#main-content.form-ufl input[type=submit] {
-    background-color: #ffffff;
-}
-
 @media screen and (max-width: 481px) {
+
+    #main .gform_wrapper input::-webkit-date-and-time-value,
     #main-content.form-ufl input::-webkit-date-and-time-value {
         width: 100%;
         padding: 12px 20px;
@@ -834,10 +972,12 @@ span.hozRadio {
         font-size: 16px;
     }
 
+    #main .gform_wrapper input[type=date],
     #main-content.form-ufl input[type=date] {
         height: 78px;
     }
 
+    #main .gform_wrapper input[type=time],
     #main-content.form-ufl input[type=time] {
         width: 100%;
         padding: 0px 20px;
@@ -855,6 +995,7 @@ span.hozRadio {
         font-family: var(--light-weight-sans);
     }
 
+    #main .gform_wrapper input[type=date],
     #main-content.form-ufl input[type=date] {
         color: #000000;
         font-family: var(--light-weight-sans);
@@ -871,14 +1012,24 @@ input[type="file"],
     font-family: var(--book-weight-sans);
 }
 
-input[type="submit"] {
+#main .gform_wrapper input[type="file"],
+#main-content.form-ufl input[type="file"]{
+    min-height: 63px;
+    border: none;
+    padding-top: 2px;
+    box-shadow: none;
+}
+
+#main .gform_wrapper input[type="submit"],
+#main-content.form-ufl input[type="submit"] {
     background-repeat: no-repeat;
     background-size: calc(87% - 0px) 1px, 0px calc(100% - 0px);
     background-position: calc(100%) 0px, calc(100% - 0px) 0px, 0px calc(100% - 0px), 0px 0px;
     background-image: linear-gradient(0deg, #FA4616, #FA4616), linear-gradient(0deg, #FA4616, #FA4616), linear-gradient(0deg, #FA4616, #FA4616), linear-gradient(0deg, #FA4616, #FA4616);
 }
 
-input[type="submit"]:hover {
+#main .gform_wrapper input[type="submit"]:hover,
+#main-content.form-ufl input[type="submit"]:hover {
     background-size: calc(100% - 0px) 1px, 0px calc(100% - 0px);
 }
 
@@ -890,38 +1041,50 @@ input[type="submit"]:hover {
     margin-right: 15px;
 }
 
+#main .gform_wrapper .gfield_required,
 #main-content.form-ufl .gfield_required {
     color: #fa4616
 }
 
+#main .gform_wrapper .field_sublabel_below input+label,
 #main-content.form-ufl .field_sublabel_below input+label,
+#main .gform_wrapper .field_sublabel_below select+label,
 #main-content.form-ufl .field_sublabel_below select+label,
+#main .gform_wrapper .field_sublabel_below select+button+label,
 #main-content.form-ufl .field_sublabel_below select+button+label,
+#main .gform_wrapper .field_sublabel_below .bootstrap-select+label,
 #main-content.form-ufl .field_sublabel_below .bootstrap-select+label {
     margin-top: -30px;
     margin-bottom: 30px;
 }
 
+#main .gform_wrapper .gfield--type-checkbox.field_sublabel_below input+label,
 #main-content.form-ufl .gfield--type-checkbox.field_sublabel_below input+label,
+#main .gform_wrapper .gfield--type-radio.field_sublabel_below input+label,
 #main-content.form-ufl .gfield--type-radio.field_sublabel_below input+label {
     margin: 0;
 }
 
+#main .gform_wrapper div.bootstrap-select,
 #main-content.form-ufl div.bootstrap-select {
     width: 100%
 }
 
+#main .gform_wrapper .bootstrap-select button,
 #main-content.form-ufl .bootstrap-select button,
+#main .gform_wrapper .bootstrap-select button .filter-option,
 #main-content.form-ufl .bootstrap-select button .filter-option {
     display: flex;
     align-items: center;
 }
 
+#main .gform_wrapper input[value=gf_other_choice]:not(:checked)~input[value=Other],
 #main-content.form-ufl input[value=gf_other_choice]:not(:checked)~input[value=Other] {
     display: none;
 }
 
 /* style the items (options), including the selected item: */
+#main .gform_wrapper .bootstrap-select li a,
 #main-content.form-ufl .bootstrap-select li a,
 a.selected {
     color: #0021A5;
@@ -929,13 +1092,14 @@ a.selected {
     border: transparent;
     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     cursor: pointer;
-    /* height: 100%; */
+    height: 100%;
     font-size: 18px;
     line-height: 28px;
     font-family: var(--book-weight-sans);
 }
 
 /* Style items (options): */
+#main .gform_wrapper .bootstrap-select .dropdown-menu,
 #main-content.form-ufl .bootstrap-select .dropdown-menu {
     background-color: #F4F6F6;
     z-index: 99;
@@ -946,23 +1110,30 @@ a.selected {
     font-family: var(--book-weight-sans);
 }
 
+#main .gform_wrapper .gfield_time_ampm .bootstrap-select button,
 #main-content.form-ufl .gfield_time_ampm .bootstrap-select button {
     padding: 12px;
 }
 
+#main .gform_wrapper .bootstrap-select li a:hover,
 #main-content.form-ufl .bootstrap-select li a:hover,
+#main .gform_wrapper .bootstrap-select .active .dropdown-item,
 #main-content.form-ufl .bootstrap-select .active .dropdown-item {
     background-color: inherit;
 }
 
+#main .gform_wrapper .bootstrap-select li a:hover span,
 #main-content.form-ufl .bootstrap-select li a:hover span,
+#main .gform_wrapper .bootstrap-select .active span,
 #main-content.form-ufl .bootstrap-select .active span,
+#main .gform_wrapper .bootstrap-select li a:focus span,
 #main-content.form-ufl .bootstrap-select li a:focus span {
     text-decoration: underline;
     text-decoration-color: #FA4616;
     text-underline-offset: 4px;
 }
 
+#main .gform_wrapper .bootstrap-select .filter-option-inner-inner,
 #main-content.form-ufl .bootstrap-select .filter-option-inner-inner {
     font-size: 18px;
     font-family: var(--book-weight-sans);
@@ -970,23 +1141,26 @@ a.selected {
 }
 
 /* Even more Form customizations (to distinguish between WordPress Template and Forms.webservices*/
-
-#content #main-content.form-ufl .bootstrap-select ul {
+#content #main .gform_wrapper .bootstrap-select ul,
+#content #main-content.form-ufl .gform_wrapper .bootstrap-select ul {
     padding-left: 0px;
     list-style: none;
 }
 
-#content #main-content.form-ufl .bootstrap-select ul li {
+#content #main .gform_wrapper .bootstrap-select ul li,
+#content #main-content.form-ufl .gform_wrapper .bootstrap-select ul li {
     padding-left: 0px;
 }
 
-input[type=submit] {
+#main .gform_wrapper input[type="submit"],
+#main-content.form-ufl input[type="submit"] {
     touch-action: manipulation;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
 }
 
-input[type=submit] {
+#main .gform_wrapper input[type="submit"],
+#main-content.form-ufl input[type="submit"] {
     border-left-width: 1px;
     border-right-width: 1px;
     border-top-width: 0;
@@ -1008,7 +1182,9 @@ input[type=submit] {
 }
 
 @media (max-width: 767px) {
-    input[type=submit] {
+
+    #main .gform_wrapper input[type="submit"],
+    #main-content.form-ufl input[type="submit"] {
         font-size: 20px;
         padding: 16px !important;
         min-height: 70px;
@@ -1016,33 +1192,41 @@ input[type=submit] {
     }
 }
 
-input[type=submit]:hover::before,
-input[type=submit]:focus::before {
+#main .gform_wrapper input[type="submit"]:hover::before,
+#main-content.form-ufl input[type="submit"]:hover::before,
+#main .gform_wrapper input[type="submit"]:focus::before,
+#main-content.form-ufl input[type="submit"]:focus::before {
     width: 100%;
 }
 
-input[type=submit]:hover::after,
-input[type=submit]:focus::after {
+#main .gform_wrapper input[type="submit"]:hover::after,
+#main-content.form-ufl input[type="submit"]:hover::after,
+#main .gform_wrapper input[type="submit"]:focus::after,
+#main-content.form-ufl input[type="submit"]:focus::after {
     width: 100%;
 }
 
-input[type=submit] {
+#main .gform_wrapper input[type="submit"],
+#main-content.form-ufl input[type="submit"] {
     border-color: #fa4616;
 }
 
-input[type=submit] {
+#main .gform_wrapper input[type="submit"],
+#main-content.form-ufl input[type="submit"] {
     color: #343741;
+    background-color: #ffffff;
 }
 
-input[type=submit]:hover,
-input[type=submit]:focus {
+#main .gform_wrapper input[type="submit"]:hover,
+#main-content.form-ufl input[type="submit"]:hover,
+#main .gform_wrapper input[type="submit"]:focus,
+#main-content.form-ufl input[type="submit"]:focus {
     color: #343741;
     background-color: #f4f6f6 !important;
     box-shadow: none;
 }
 
 /* List styles */
-
 /* Base styles */
 #content ul,
 #content ol {
@@ -1067,6 +1251,10 @@ input[type=submit]:focus {
 #content ul,
 #content ol {
     list-style-type: none;
+}
+
+div#content form#misha_filters ul.dropdown-menu li::before {
+    content: " ";
 }
 
 /* Custom bullet points for UL using nth-child to repeat the pattern */
@@ -1275,8 +1463,8 @@ input[type=submit]:focus {
 
 /*404 Page styles*/
 div.page-404 section.title-block {
-	background-color: transparent;
-} 
+    background-color: transparent;
+}
 
 /* Specific overrides for breadcrumb styles */
 .breadcrumb-wrapper .breadcrumb {
@@ -1333,12 +1521,6 @@ div.page-404 section.title-block {
 }
 
 /* Event Shell */
-.event-shell {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    padding-left: 7%;
-    padding-right: 7%;
-}
 
 .event-shell .event-shell-wrapper .event-shell-carousel {
     max-width: 1720px;
@@ -1612,4 +1794,152 @@ div.page-404 section.title-block {
 
 .has-light-gray-background-color {
     background: #f4f6f6;
+}
+
+
+.reciteme-btn {
+    /* Button Styling and Placement */
+    background: #00344c;
+    width: 100px;
+    height: 100px;
+    bottom: 14px;
+    left: 14px;
+
+    position: fixed;
+    border-radius: 50%;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.reciteme-btn:hover {
+    /* Hover Color */
+    background: #e9322e;
+}
+
+/**.reciteme-btn img {
+     Button Image Size 
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}*/
+
+.reciteMe-btn-blue {
+    border: none;
+    background: #0021A5;
+    padding: 1px;
+    width: auto;
+    height: auto;
+    bottom: 1rem;
+    left: 1rem;
+    position: fixed;
+    border-radius: 50%;
+    display: none;
+    z-index: 9999;
+    font-family: var(--book-bold-sans);
+    color: #FFF;
+}
+
+.acc-icon,
+.acc-icon-top {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url('./img/reciteMeIcon/typeStandalone-ColourWhite.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.reciteMe-btn-default {
+    border: none;
+    background: #343741;
+    padding: 1px;
+    width: auto;
+    height: auto;
+    position: relative;
+    border-radius: 1.6rem;
+    z-index: 10000;
+    display: none;
+    font-family: var(--book-bold-sans);
+    color: #FFF;
+    align-items: center;
+    margin: auto .25rem .5rem;
+}
+
+.showNavReciteMebtn {
+    display: flex;
+}
+
+.showFloatReciteMebtn {
+    display: block;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+@media (max-width: 1410px) {
+    .reciteMe-btn-default {
+        margin: 0.25rem 2rem 1rem;
+    }
+}
+
+@media (max-width: 1409px) {
+
+    .header .col-logo,
+    .header .navbar-brand {
+        margin-right: auto;
+    }
+}
+
+
+/* Style multi-file upload */
+#main .gform_wrapper button.gform_button_select_files,
+#main-content.form-ufl button.gform_button_select_files {
+    border: #fa4616 2px dotted;
+    border-radius: 100px;
+    text-align: center;
+    display: inline-block;
+    padding: 15px 30px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    text-decoration: none;
+    margin-bottom: 10px;
+    width: 200px;
+    font-family: 'gentonamedium';
+    color: #0021A5;
+    background-color: #ffffff;
+    font-size: 1.25rem;
+}
+#main .gform_wrapper button.gform_button_select_files:hover,
+#main-content.form-ufl button.gform_button_select_files:hover {
+    background-color: #F4F6F6;
+}
+#main .gform_wrapper div.gform_drop_area,
+#main-content.form-ufl div.gform_drop_area {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #F4F6F6;
+    color: #343741;
+}
+
+/* Oribital Theme specific styles */
+#main .gform_wrapper div.gform_drop_area:before, #main-content.form-ufl div.gform_drop_area:before {
+    display: none;
+}
+#main .gform_wrapper .gform_footer,#main .gform_wrapper .gform_page_footer,
+#main-content.form-ufl .gform_footer, #main-content.form-ufl .gform_page_footer{
+    margin: 6px 0 0;
+    padding: 16px 0;
+}
+
+#main .gform_wrapper.gravity-theme .gfield_label, #main .gform_wrapper.gravity-theme legend.gfield_label,
+#main-content.form-ufl .gravity-theme .gfield_label, #main-content.form-ufl .gravity-theme legend.gfield_label {
+    font-weight: 500;
+}
+:root{
+    --gf-local-font-size: 15px;
 }

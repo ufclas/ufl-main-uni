@@ -13,7 +13,7 @@
  */
 
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
 <head>
@@ -206,6 +206,54 @@
                         </div>
                     </div>
                     <?php } ?>
+                    <!--ReciteMe Button Top Navbar-->
+                 
+                    <?php
+                    $add_classes = '';
+                    if (get_theme_mod('navbar_recite_me_button', false)) {
+                    $add_classes .= ' shadow showNavReciteMebtn';
+                    }
+                    ?>
+
+                <button aria-label="Launch Recite Me assistive technology" class="reciteMe-btn-default<?php echo $add_classes; ?>" role="button" id="enableRecite2"><span class="acc-icon-top"></span>
+        </button>
+                    <script>
+        
+                    document.getElementById('enableRecite2').addEventListener("click", function() {
+                    if (typeof loadService !== 'undefined' && typeof loadService === 'function') {
+                            loadService();
+                    } else {
+                        console.warn('Recite Me is not ready yet.');
+                    } 
+                    
+
+                    });
+                    </script>
+                    <script>
+                        const reciteMeNavChangeMobile = () => {
+                            const widthOfBody = window.innerWidth;
+                            const reciteMeNavButton = document.querySelector(".reciteMe-btn-default");
+                            const reciteMeFloatButton = document.querySelector(".reciteMe-btn-blue");
+                            
+                            const navButtonClasses = reciteMeNavButton.getAttribute("class");
+                            const showReciteMeNavBtn = navButtonClasses && navButtonClasses.includes("shadow");
+                            
+
+                            if(showReciteMeNavBtn === true) {
+                               if(widthOfBody <= 1409) {
+                                    reciteMeNavButton.classList.remove("showNavReciteMebtn");
+                                    reciteMeFloatButton.classList.add( "showFloatReciteMebtn");
+                               } else if (widthOfBody > 1409){
+                                reciteMeNavButton.classList.add("showNavReciteMebtn");
+                                reciteMeFloatButton.classList.remove("showFloatReciteMebtn");
+                              }
+                            } 
+
+                        }
+                            
+                        document.addEventListener("DOMContentLoaded", reciteMeNavChangeMobile);
+                        window.addEventListener("resize", reciteMeNavChangeMobile);
+                    </script>
                 </div>
             </div>
             <!-- END DESKTOP ONLY TOP MENU ITEMS & DROPDOWNS-->
@@ -233,6 +281,7 @@
                 ?>
                 <div class="mobile-secondary-dropdown">
                 </div>
+     
             </div>
         </div>
     </nav>
