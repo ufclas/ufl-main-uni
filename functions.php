@@ -722,7 +722,7 @@ function get_the_top_ancestor_id() {
 
 // Single News Filtering
 
-function get_posts_years_array() {
+/*function get_posts_years_array() {
 	global $wpdb;
 	$result = array();
 	$years = $wpdb->get_results(
@@ -735,8 +735,19 @@ function get_posts_years_array() {
 	  }
 	}
 	return $result;
-  }
+  }*/
   
+  function get_posts_years_array() {
+  global $wpdb;
+  $results = $wpdb->get_col("
+    SELECT DISTINCT YEAR(post_date)
+    FROM {$wpdb->posts}
+    WHERE post_status = 'publish'
+      AND post_type = 'post'
+    ORDER BY post_date DESC
+  ");
+  return $results;
+}
 
 add_action( 'wp_enqueue_scripts', 'misha_script_and_styles');
 
@@ -782,7 +793,7 @@ function misha_loadmore_ajax_handler(){
 add_action('wp_ajax_mishafilter', 'misha_filter_function'); 
 add_action('wp_ajax_nopriv_mishafilter', 'misha_filter_function');
  
-function misha_filter_function(){
+/*function misha_filter_function(){
 	if(isset($_POST['datefilter']) && $_POST['datefilter'] != '') {
 		$datefilter = $_POST['datefilter'];
 	}
@@ -869,6 +880,62 @@ function misha_filter_function(){
 	) );
  
 	die();
+}*/
+
+function misha_filter_function() {
+  $params = [
+    'post_type' => 'post',
+    'posts_per_page' => 15,
+    'post_status' => 'publish',
+  ];
+
+  if (!empty($_POST['datefilter']) || !empty($_POST['monthfilter'])) {
+    $date_query = [];
+
+    if (!empty($_POST['datefilter'])) {
+      $date_query['year'] = intval($_POST['datefilter']);
+    }
+
+    if (!empty($_POST['monthfilter'])) {
+      $date_query['month'] = intval($_POST['monthfilter']);
+    }
+
+    $params['date_query'] = [$date_query];
+  }
+
+  if (!empty($_POST['categoryfilter'])) {
+    $params['tax_query'] = [
+      [
+        'taxonomy' => 'category',
+        'field' => 'id',
+        'terms' => intval($_POST['categoryfilter']),
+      ]
+    ];
+  }
+
+  query_posts($params);
+
+  global $wp_query;
+
+  if (have_posts()) {
+    ob_start();
+    while (have_posts()) {
+      the_post();
+      get_template_part('template-parts/content-post');
+    }
+    $posts_html = ob_get_clean();
+  } else {
+    $posts_html = '<p>Nothing found for your criteria.</p>';
+  }
+
+  echo json_encode([
+    'posts' => json_encode($wp_query->query_vars),
+    'max_page' => $wp_query->max_num_pages,
+    'found_posts' => $wp_query->found_posts,
+    'content' => $posts_html,
+  ]);
+
+  wp_die();
 }
 
 

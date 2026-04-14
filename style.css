@@ -1943,3 +1943,19 @@ div.page-404 section.title-block {
 :root{
     --gf-local-font-size: 15px;
 }
+
+/* Fix for misaligned dropdown items on Safari, desktop */
+@media (min-width: 1410px) {
+    .header #main-nav-ul .dropdown-menu li{
+        margin-bottom: 0;
+        padding-bottom: 10px;
+    }
+}
+
+/*Make filtering dropdown scrollable*/
+
+.dropdown-menu.button-group {
+  max-height: 300px; /* Adjust height as needed */
+  overflow-y: auto;
+  overflow-x: hidden;
+}

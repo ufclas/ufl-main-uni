@@ -650,16 +650,17 @@ jQuery(document).ready(function ($) {
 
     // Tab Block
     jQuery('.tab-block').each(function (index, value) {
-        jQuery('.tab-link').each(function (index, value) {
+        var currentBlock = jQuery(this);
+        currentBlock.find('.tab-link').each(function (index, value) {
             var currentSnippet = jQuery(this).clone();
-            jQuery('#tab-block').append(currentSnippet);
+            currentBlock.find('#tab-block').append(currentSnippet);
         });
-        jQuery(this).find('.desktop-tab-link-col .tab-link').first().removeClass('collapsed');
-        jQuery(this).find('.tab-content .tab-link').first().removeClass('collapsed');
-        jQuery(this).find('.tab-content .tab-link').first().removeClass('collapsed');
-        jQuery(this).find('.tab-content .accordion-item').find('.accordion-collapse').first().addClass('show');
-        var dataParent = jQuery('.tab-content').attr('id');
-        jQuery(this).find('.accordion-collapse').attr('data-bs-parent', '#' + dataParent);
+        currentBlock.find('.desktop-tab-link-col .tab-link').first().removeClass('collapsed');
+        currentBlock.find('.tab-content .tab-link').first().removeClass('collapsed');
+        currentBlock.find('.tab-content .tab-link').first().removeClass('collapsed');
+        currentBlock.find('.tab-content .accordion-item').find('.accordion-collapse').first().addClass('show');
+        var dataParent = currentBlock.find('.tab-content').attr('id');
+        currentBlock.find('.accordion-collapse').attr('data-bs-parent', '#' + dataParent);
 
         jQuery('.desktop-tab-link-col .tab-link').each(function (index, value) {
             jQuery(this).attr('id', '');
@@ -1268,4 +1269,27 @@ jQuery("input[type=checkbox], input[type=radio]").on('click', function(e){
     if (e.clientX !== 0 || e.clientY !== 0) {
         jQuery(this).blur();
     }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const accordion = document.querySelector(".accordion");
+
+  if(accordion !== null){
+    accordion.addEventListener("shown.bs.collapse", function (event) {
+        const body = event.target.querySelector(".accordion-body");
+
+        requestAnimationFrame(() => {
+        const bodyHeight = body.scrollHeight;
+
+        if (bodyHeight > 550) {
+            body.style.maxHeight = "550px";
+            body.style.overflowY = "scroll";
+        } else {
+            body.style.maxHeight = "none";
+            body.style.overflowY = "visible";
+        }
+        });
+    });
+  }
 });
