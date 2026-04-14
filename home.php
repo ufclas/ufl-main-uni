@@ -18,12 +18,13 @@ $postid = get_option('page_for_posts');
 
         <form id="misha_filters" action="#">
           <div class="filter-wrapper">
-            <div class="select-wrapper">
+            <!--categories dropdown -->
+            <!--<div class="select-wrapper">
               <div class="dropdown">
                 <button type="button" class="filter-button btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-name="categoryfilter" data-value="">Categories</button>
                 <ul class="dropdown-menu button-group">
                   <li><button type="button" class="filter-button" data-name="categoryfilter" data-value="">All Categories</button></li>
-                  <?php
+                  <//?php
                   $categories = get_categories([
                     "orderby" => "name",
                     "order" => "ASC",
@@ -41,8 +42,8 @@ $postid = get_option('page_for_posts');
                 </ul>
                 <input type="hidden" name="categoryfilter" id="categoryfilter" value="">
               </div>
-            </div>
-
+            </div> -->
+                  <!--Year dropdown--> 
             <div class="select-wrapper">
               <div class="dropdown">
                 <button type="button" class="filter-button btn dropdown-toggle" data-bs-toggle="dropdown" data-name="datefilter" data-value="">News Dates</button>
@@ -61,6 +62,27 @@ $postid = get_option('page_for_posts');
                 <input type="hidden" name="datefilter" id="datefilter" value="">
               </div>
             </div>
+                <!--Month dropdown-->         
+            <div class="select-wrapper">
+              <div class="dropdown">
+                <button type="button" class="filter-button btn dropdown-toggle" data-bs-toggle="dropdown" data-name="monthfilter" data-value="">News Months</button>
+                <ul class="dropdown-menu button-group">
+                  <li><button type="button" class="filter-button" data-name="monthfilter" data-value="">All Months</button></li>
+                  <?php
+                  $months = [
+                    1 => 'January', 2 => 'February', 3 => 'March', 4 => 'April',
+                    5 => 'May', 6 => 'June', 7 => 'July', 8 => 'August',
+                    9 => 'September', 10 => 'October', 11 => 'November', 12 => 'December'
+                  ];
+                  foreach ($months as $num => $name) {
+                    echo '<li><button type="button" class="filter-button" data-name="monthfilter" data-value="' . $num . '">' . $name . '</button></li>';
+                  }
+                  ?>
+                </ul>
+                <input type="hidden" name="monthfilter" id="monthfilter" value="">
+              </div>
+            </div>
+
           </div> <!-- End Filter Wrapper -->
 
           <!-- required hidden field for admin-ajax.php -->
