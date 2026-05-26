@@ -1420,27 +1420,6 @@ div#content form#misha_filters ul.dropdown-menu li::before {
     line-height: 25px;
 }
 
-/* Reversed ordered lists: the custom counter above only counts up,
-   which breaks <ol reversed>. Restore native numbering for these. */
-#content ol[reversed] {
-    list-style-type: decimal;
-    counter-reset: none;
-}
-
-#content ol[reversed] > li {
-    display: list-item;
-}
-
-#content ol[reversed] > li::before {
-    content: none;
-}
-
-#content ol[reversed] > li::marker {
-    color: #0021A5;
-    font-family: var(--semi-bold-sans);
-    font-size: 20px;
-}
-
 #content ul li::before {
     line-height: 25px;
     font-family: var(--semi-bold-sans);
