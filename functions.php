@@ -1496,9 +1496,3 @@ function same_site_search_callback() {
 }
 
 add_action( 'admin_init', 'add_same_site_search_setting' );
-
-function wpmlsupp_1891_fix_missing_icl_tables() {
-    if( function_exists( 'icl_sitepress_activate' ) )
-        icl_sitepress_activate();
-}
-add_action( 'wp_footer', 'wpmlsupp_1891_fix_missing_icl_tables' );
