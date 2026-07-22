@@ -1308,7 +1308,7 @@ function start_custom_session() {
       session_start();
   }
 }
-add_action('init', 'start_custom_session');
+add_action('init', 'start_custom_session', 1);
 
 add_action('wp_ajax_nav_display_action', 'nav_display_action_callback');
 add_action('wp_ajax_nopriv_nav_display_action', 'nav_display_action_callback');

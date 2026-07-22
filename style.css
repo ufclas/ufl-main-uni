@@ -231,6 +231,14 @@ body.search-has-run.search-open {
     color: var(--core-orange);
 }
 
+.search-modal .gsc-result a.gs-title:focus {
+    outline-style: auto !important;
+}
+
+.search-modal .gs-title {
+    overflow: visible !important;
+}
+
 @media (max-width: 768px) {
     .site-logo img {
         width: 230px;
