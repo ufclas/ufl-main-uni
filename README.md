@@ -1,5 +1,3 @@
-[![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine)
-
 <div align="center">
  <img src="https://raw.githubusercontent.com/craftwerkberlin/bootscore-5/main/img/logo/logo.svg" height="50">
 </div>
